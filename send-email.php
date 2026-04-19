@@ -54,8 +54,14 @@ $confirmHtml = <<<HTML
         <!-- HEADER -->
         <tr>
           <td style="background:linear-gradient(135deg,#1E0A4E 0%,#3D1470 50%,#5B21B6 100%);border-radius:12px 12px 0 0;padding:40px 40px 32px;text-align:center;">
-            <img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png"
-                 alt="R3DOUBT Security Group" width="140" style="display:block;margin:0 auto 24px;filter:brightness(0) invert(1);"/>
+            <table cellpadding="0" cellspacing="0" style="margin:0 auto 24px;">
+              <tr>
+                <td style="background:#ffffff;border-radius:12px;padding:12px 20px;text-align:center;">
+                  <img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png"
+                       alt="R3DOUBT Security Group" width="130" style="display:block;"/>
+                </td>
+              </tr>
+            </table>
             <div style="display:inline-block;padding:5px 16px;border:1px solid rgba(196,181,253,.3);border-radius:100px;margin-bottom:20px;">
               <span style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C4B5FD;">Message Received</span>
             </div>
@@ -204,8 +210,14 @@ $notifyHtml = <<<HTML
         <!-- HEADER -->
         <tr>
           <td style="background:linear-gradient(135deg,#1E0A4E 0%,#3D1470 50%,#5B21B6 100%);border-radius:12px 12px 0 0;padding:32px 40px;text-align:center;">
-            <img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png"
-                 alt="R3DOUBT Security Group" width="120" style="display:block;margin:0 auto 20px;filter:brightness(0) invert(1);"/>
+            <table cellpadding="0" cellspacing="0" style="margin:0 auto 20px;">
+              <tr>
+                <td style="background:#ffffff;border-radius:10px;padding:10px 18px;text-align:center;">
+                  <img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png"
+                       alt="R3DOUBT Security Group" width="110" style="display:block;"/>
+                </td>
+              </tr>
+            </table>
             <div style="display:inline-block;padding:4px 14px;border:1px solid rgba(196,181,253,.3);border-radius:100px;margin-bottom:14px;">
               <span style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C4B5FD;">New Inquiry</span>
             </div>
