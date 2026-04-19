@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programs | R3DOUBT Security Group</title>
+  <meta name="description" content="Packaged security programs for every threat profile — Baseline, Resilience, Healthcare, and Executive Assurance."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['"Barlow Condensed"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+  <style>
+    :root{--p900:#1E0A4E;--p800:#3D1470;--p700:#5B21B6;--p600:#7C3AED;--p100:#EDE9FE;--p50:#F5F3FF;--black:#0A0A0A;--gray700:#374151;--gray500:#6B7280;--gray300:#D1D5DB;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:#fff;color:var(--black);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#f5f3ff;}::-webkit-scrollbar-thumb{background:var(--p700);border-radius:3px;}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:all .35s ease;border-bottom:1px solid transparent;}
+    #navbar.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);padding:10px 0;border-color:rgba(91,33,182,.12);box-shadow:0 4px 24px -4px rgba(91,33,182,.1);}
+    .nav-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray700);text-decoration:none;padding:4px 0;position:relative;transition:color .2s;}
+    .nav-link:hover,.nav-link.active{color:var(--p700);}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--p700);transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:var(--p700);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 4px 16px -4px rgba(91,33,182,.4);}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px -6px rgba(91,33,182,.5);background:var(--p800);}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;color:var(--p700);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--p700);border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,color .2s;}
+    .btn-outline:hover{transform:translateY(-2px);background:var(--p700);color:#fff;}
+    .btn-white{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:#fff;color:var(--p700);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 28px -6px rgba(0,0,0,.2);}
+    .section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--p700);}
+    .section-label::before,.section-label::after{content:'';width:24px;height:2px;background:var(--p700);}
+    .text-gradient{background:linear-gradient(135deg,var(--p800) 0%,var(--p600) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .icon-badge{width:52px;height:52px;border-radius:12px;background:var(--p100);border:1px solid rgba(91,33,182,.2);display:flex;align-items:center;justify-content:center;}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+    .check{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--gray700);margin-bottom:10px;}
+    .check svg{flex-shrink:0;margin-top:1px;}
+    .pulse-dot{width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulseDot 2s ease-in-out infinite;}
+    @keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5);}50%{box-shadow:0 0 0 8px rgba(34,197,94,0);}}
+    .cta-purple{background:linear-gradient(135deg,var(--p900) 0%,var(--p700) 100%);}
+    footer{background:#111827;}
+    #mobile-menu{display:none;}#mobile-menu.open{display:block;}
+    .program-card{border-radius:16px;border:1px solid rgba(91,33,182,.12);background:#fff;transition:transform .3s,box-shadow .3s,border-color .3s;}
+    .program-card:hover{transform:translateY(-6px);border-color:rgba(91,33,182,.4);box-shadow:0 28px 56px -12px rgba(91,33,182,.2);}
+    .program-popular{border:2px solid var(--p700);box-shadow:0 8px 40px -8px rgba(91,33,182,.3);}
+    .popular-tag{background:linear-gradient(135deg,var(--p700),var(--p600));color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;border-radius:100px;}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+      <a href="index.html"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT" class="h-10 w-auto object-contain"/></a>
+      <div class="hidden md:flex items-center gap-8 lg:gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="programs.html" class="nav-link active">Programs</a>
+        <a href="leadership.html" class="nav-link">Leadership</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <div class="flex items-center gap-2"><div class="pulse-dot"></div><span class="text-xs font-semibold" style="color:#16a34a;">Available 24/7</span></div>
+        <a href="contact.html" class="btn-primary">Schedule Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <button id="menu-btn" class="md:hidden p-2" style="color:var(--gray700);" aria-label="Menu">
+        <svg id="ico-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="ico-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden py-6 border-t mt-2 space-y-5" style="border-color:rgba(91,33,182,.1);">
+      <a href="index.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Home</a>
+      <a href="services.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Services</a>
+      <a href="programs.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--p700);">Programs</a>
+      <a href="leadership.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Leadership</a>
+      <a href="contact.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Contact</a>
+      <a href="contact.html" class="btn-primary w-full justify-center mt-4">Schedule Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="pt-36 pb-20 relative overflow-hidden" style="background:linear-gradient(135deg,var(--p50) 0%,#fff 60%);">
+  <svg class="absolute opacity-5" style="width:500px;height:500px;top:-100px;right:-100px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#5B21B6" stroke-width="1.5"/></svg>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <div class="section-label reveal mb-6">Packaged Programs</div>
+    <h1 class="font-display reveal d1 text-5xl md:text-7xl uppercase leading-none mb-6" style="font-weight:900;letter-spacing:-.02em;line-height:1.0;">
+      Built for Every<br/><span class="text-gradient">Threat Profile</span>
+    </h1>
+    <p class="reveal d2 text-lg max-w-2xl mx-auto leading-relaxed" style="color:var(--gray500);">
+      Tailored security programs designed around your organization's size, industry, and risk appetite. Each program is scalable and delivered by our certified expert team.
+    </p>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="py-20 pb-28" style="background:#fff;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Compare hint -->
+    <div class="reveal text-center mb-12">
+      <span style="font-size:13px;color:var(--gray500);">Not sure which program fits your organization? <a href="contact.html" style="color:var(--p700);font-weight:600;text-decoration:none;">Talk to our team →</a></span>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+
+      <!-- Baseline -->
+      <div class="reveal program-card p-8 flex flex-col">
+        <div class="icon-badge mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h2 class="font-display text-2xl uppercase mb-3" style="font-weight:800;letter-spacing:-.01em;">Baseline Risk Program</h2>
+        <p style="color:var(--gray500);font-size:13px;line-height:1.7;flex:1;margin-bottom:20px;">Essential security foundations for organizations starting their security journey. We establish the critical controls needed to protect against common threats and meet basic compliance requirements.</p>
+
+        <div style="background:var(--p50);border-radius:10px;padding:18px;margin-bottom:20px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:12px;">Ideal For</div>
+          <p style="font-size:12px;color:var(--gray500);line-height:1.6;">Small to mid-sized businesses and startups building their first formal security program.</p>
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gray700);margin-bottom:12px;">What's Included</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Initial Risk &amp; Vulnerability Assessment</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Core Security Policy Development</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Basic Security Awareness Training</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Essential Endpoint &amp; Network Controls</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Quarterly Security Reviews</div>
+        </div>
+        <a href="contact.html" class="btn-outline w-full justify-center">Get Started</a>
+      </div>
+
+      <!-- Resilience — Popular -->
+      <div class="reveal d1 program-card program-popular p-8 flex flex-col relative">
+        <div class="absolute top-5 right-5"><span class="popular-tag">Most Popular</span></div>
+        <div class="icon-badge mb-6" style="background:rgba(91,33,182,.15);border-color:rgba(91,33,182,.3);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h2 class="font-display text-2xl uppercase mb-3" style="font-weight:800;letter-spacing:-.01em;">Resilience Program</h2>
+        <p style="color:var(--gray500);font-size:13px;line-height:1.7;flex:1;margin-bottom:20px;">Advanced security posture with active monitoring, incident response capabilities, and ongoing security improvement. Designed for organizations that face targeted threats or have complex operational environments.</p>
+
+        <div style="background:var(--p50);border-radius:10px;padding:18px;margin-bottom:20px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:12px;">Ideal For</div>
+          <p style="font-size:12px;color:var(--gray500);line-height:1.6;">Established enterprises with significant intellectual property and complex threat exposure.</p>
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gray700);margin-bottom:12px;">What's Included</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Continuous Vulnerability Management</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Advanced Threat Detection &amp; Response</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Annual Penetration Testing</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Business Continuity Planning</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Dedicated vCISO (Monthly)</div>
+        </div>
+        <a href="contact.html" class="btn-primary w-full justify-center">Get Started</a>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="reveal d2 program-card p-8 flex flex-col">
+        <div class="icon-badge mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h2 class="font-display text-2xl uppercase mb-3" style="font-weight:800;letter-spacing:-.01em;">Healthcare &amp; Dental Security</h2>
+        <p style="color:var(--gray500);font-size:13px;line-height:1.7;flex:1;margin-bottom:20px;">Specialized security solutions tailored for healthcare providers, addressing strict HIPAA compliance, medical device security, and the unique challenges of protecting patient health information (PHI).</p>
+
+        <div style="background:var(--p50);border-radius:10px;padding:18px;margin-bottom:20px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:12px;">Ideal For</div>
+          <p style="font-size:12px;color:var(--gray500);line-height:1.6;">Hospitals, clinics, dental practices, and healthcare technology vendors.</p>
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gray700);margin-bottom:12px;">What's Included</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Comprehensive HIPAA Risk Analysis</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Medical Device (IoMT) Assessment</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>PHI Data Flow Mapping</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Healthcare Incident Response</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>BAA Management</div>
+        </div>
+        <a href="contact.html" class="btn-outline w-full justify-center">Get Started</a>
+      </div>
+
+      <!-- Executive -->
+      <div class="reveal d3 program-card p-8 flex flex-col">
+        <div class="icon-badge mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h2 class="font-display text-2xl uppercase mb-3" style="font-weight:800;letter-spacing:-.01em;">Executive Assurance Program</h2>
+        <p style="color:var(--gray500);font-size:13px;line-height:1.7;flex:1;margin-bottom:20px;">Board-level security oversight providing strategic risk management, compliance reporting, and executive protection. Translates technical cyber risk into business impact for leadership teams.</p>
+
+        <div style="background:var(--p50);border-radius:10px;padding:18px;margin-bottom:20px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:12px;">Ideal For</div>
+          <p style="font-size:12px;color:var(--gray500);line-height:1.6;">Public companies, financial institutions, and high-profile executive teams.</p>
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gray700);margin-bottom:12px;">What's Included</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Board-Ready Risk Dashboards</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Executive Digital Footprint Protection</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>M&amp;A Cyber Due Diligence</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Security Investment Planning</div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Crisis Communications Readiness</div>
+        </div>
+        <a href="contact.html" class="btn-outline w-full justify-center">Get Started</a>
+      </div>
+
+    </div>
+
+    <!-- Not sure callout -->
+    <div class="reveal mt-12 p-8 rounded-2xl text-center" style="background:var(--p50);border:1px solid rgba(91,33,182,.15);">
+      <h3 class="font-display text-3xl uppercase mb-3" style="font-weight:800;">Not Sure Which Program Fits?</h3>
+      <p style="color:var(--gray500);max-width:500px;margin:0 auto 24px;line-height:1.7;">Our team will assess your organization's specific needs and recommend the right program — or build a custom engagement tailored to your requirements.</p>
+      <a href="contact.html" class="btn-primary">Talk to an Expert <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-purple py-20 relative overflow-hidden">
+  <svg class="absolute opacity-10" style="width:400px;height:400px;top:-100px;right:-50px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1"/></svg>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class="font-display reveal text-5xl md:text-6xl uppercase leading-none text-white mb-6" style="font-weight:900;line-height:1.0;">Every Organization<br/>Deserves Security</h2>
+    <p class="reveal d1 text-lg mb-10 max-w-xl mx-auto leading-relaxed" style="color:rgba(255,255,255,.7);">Regardless of size or budget, we have a program that fits. Let's talk.</p>
+    <div class="reveal d2 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="btn-white text-sm px-10 py-4">Schedule Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="services.html" class="btn-outline text-sm px-10 py-4" style="border-color:rgba(255,255,255,.4);color:#fff;">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT" class="h-10 w-auto mb-5" style="filter:brightness(0) invert(1);opacity:.9;"/><p style="color:rgba(255,255,255,.4);font-size:13px;line-height:1.7;">Ready. Reliable. Resilient.<br/>Veteran-owned cybersecurity built to endure.</p></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Pages</h4><ul><li class="mb-3"><a href="index.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Home</a></li><li class="mb-3"><a href="services.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Services</a></li><li class="mb-3"><a href="programs.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Programs</a></li><li class="mb-3"><a href="leadership.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Leadership</a></li><li><a href="contact.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Contact</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Programs</h4><ul><li class="mb-3"><a href="programs.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Baseline Risk</a></li><li class="mb-3"><a href="programs.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Resilience</a></li><li class="mb-3"><a href="programs.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Healthcare &amp; Dental</a></li><li><a href="programs.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Executive Assurance</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Contact</h4><ul><li class="mb-4"><a href="tel:+19312784651" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">(931) 278-4651</a></li><li class="mb-4"><a href="mailto:info@r3doubtsec.com" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">info@r3doubtsec.com</a></li><li style="color:rgba(255,255,255,.35);font-size:13px;">All 50 States</li></ul></div>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:24px;"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4" style="font-size:12px;color:rgba(255,255,255,.25);"><p>&copy; <span id="year"></span> R3DOUBT Security Group. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); document.getElementById('ico-open').classList.toggle('hidden',open); document.getElementById('ico-close').classList.toggle('hidden',!open); });
+  const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

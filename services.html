@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | R3DOUBT Security Group</title>
+  <meta name="description" content="8 specialized cybersecurity services — governance, compliance, incident response, cloud security, IoT, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['"Barlow Condensed"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+  <style>
+    :root{--p900:#1E0A4E;--p800:#3D1470;--p700:#5B21B6;--p600:#7C3AED;--p500:#8B5CF6;--p200:#C4B5FD;--p100:#EDE9FE;--p50:#F5F3FF;--black:#0A0A0A;--gray700:#374151;--gray500:#6B7280;--gray300:#D1D5DB;--gray100:#F3F4F6;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:#fff;color:var(--black);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#f5f3ff;}::-webkit-scrollbar-thumb{background:var(--p700);border-radius:3px;}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:all .35s ease;border-bottom:1px solid transparent;}
+    #navbar.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);padding:10px 0;border-color:rgba(91,33,182,.12);box-shadow:0 4px 24px -4px rgba(91,33,182,.1);}
+    .nav-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray700);text-decoration:none;padding:4px 0;position:relative;transition:color .2s;}
+    .nav-link:hover,.nav-link.active{color:var(--p700);}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--p700);transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:var(--p700);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 4px 16px -4px rgba(91,33,182,.4);}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px -6px rgba(91,33,182,.5);background:var(--p800);}
+    .btn-primary:active{transform:translateY(1px);}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;color:var(--p700);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--p700);border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,color .2s;}
+    .btn-outline:hover{transform:translateY(-2px);background:var(--p700);color:#fff;}
+    .btn-white{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:#fff;color:var(--p700);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 28px -6px rgba(0,0,0,.2);}
+    .section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--p700);}
+    .section-label::before,.section-label::after{content:'';width:24px;height:2px;background:var(--p700);}
+    .text-gradient{background:linear-gradient(135deg,var(--p800) 0%,var(--p600) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .icon-badge{width:52px;height:52px;border-radius:12px;background:var(--p100);border:1px solid rgba(91,33,182,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.48s}.d7{transition-delay:.56s}.d8{transition-delay:.64s}
+    .service-card{background:#fff;border:1px solid rgba(91,33,182,.1);border-radius:16px;transition:transform .3s,box-shadow .3s,border-color .3s;}
+    .service-card:hover{transform:translateY(-5px);border-color:rgba(91,33,182,.35);box-shadow:0 24px 56px -12px rgba(91,33,182,.18);}
+    .check{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--gray700);margin-bottom:8px;}
+    .check svg{flex-shrink:0;margin-top:1px;}
+    .pulse-dot{width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulseDot 2s ease-in-out infinite;}
+    @keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5);}50%{box-shadow:0 0 0 8px rgba(34,197,94,0);}}
+    .cta-purple{background:linear-gradient(135deg,var(--p900) 0%,var(--p700) 100%);}
+    footer{background:#111827;}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(91,33,182,.2),transparent);}
+    #mobile-menu{display:none;}#mobile-menu.open{display:block;}
+    .hero-page{background:linear-gradient(135deg,var(--p50) 0%,#fff 60%);}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+      <a href="index.html"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT" class="h-10 w-auto object-contain"/></a>
+      <div class="hidden md:flex items-center gap-8 lg:gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="leadership.html" class="nav-link">Leadership</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <div class="flex items-center gap-2"><div class="pulse-dot"></div><span class="text-xs font-semibold tracking-wide" style="color:#16a34a;">Available 24/7</span></div>
+        <a href="contact.html" class="btn-primary">Schedule Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <button id="menu-btn" class="md:hidden p-2" style="color:var(--gray700);" aria-label="Menu">
+        <svg id="ico-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="ico-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden py-6 border-t mt-2 space-y-5" style="border-color:rgba(91,33,182,.1);">
+      <a href="index.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Home</a>
+      <a href="services.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--p700);">Services</a>
+      <a href="programs.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Programs</a>
+      <a href="leadership.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Leadership</a>
+      <a href="contact.html" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Contact</a>
+      <a href="contact.html" class="btn-primary w-full justify-center mt-4">Schedule Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="hero-page pt-36 pb-20 relative overflow-hidden">
+  <svg class="absolute opacity-5" style="width:500px;height:500px;top:-100px;right:-100px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#5B21B6" stroke-width="1.5"/></svg>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <div class="section-label reveal mb-6">What We Do</div>
+    <h1 class="font-display reveal d1 text-5xl md:text-7xl uppercase leading-none mb-6" style="font-weight:900;letter-spacing:-.02em;line-height:1.0;">
+      8 Specialized<br/><span class="text-gradient">Security Services</span>
+    </h1>
+    <p class="reveal d2 text-lg max-w-2xl mx-auto leading-relaxed" style="color:var(--gray500);">
+      Full-spectrum security operations built for organizations that can't afford to compromise.
+      Every service is delivered by certified experts with real-world operational experience.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="py-20 pb-28" style="background:#fff;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-8">
+
+    <!-- 01 -->
+    <div class="reveal service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">01</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Cybersecurity Governance &amp; Risk Leadership</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Strategic oversight and governance frameworks to align security initiatives with business objectives and regulatory requirements. We help boards and executive teams understand their cyber risk profile and make informed, defensible decisions about security investments.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Board-level risk reporting</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Security strategy alignment</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>vCISO services</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Policy &amp; standard development</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="reveal d1 service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">02</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Risk, Compliance &amp; Assurance</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Comprehensive compliance programs ensuring adherence to industry standards. We streamline the audit process and build sustainable compliance operations that reduce overhead while improving security posture — covering HIPAA, SOC2, ISO 27001, and more.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>HIPAA, SOC2, ISO 27001 readiness</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Continuous compliance monitoring</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Third-party risk management</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Internal audit support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="reveal service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">03</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Incident Response, Detection &amp; Forensics</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Rapid response capabilities with advanced forensic analysis to identify, contain, and remediate security incidents. Our battle-tested team minimizes downtime and data loss. We've supported investigations involving ransomware, BEC, insider threats, and APT activity.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>24/7 emergency response</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Digital forensics &amp; malware analysis</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Compromise assessments</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Post-incident recovery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="reveal d1 service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">04</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Physical Security &amp; Cyber-Physical Integration</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Integrated security solutions bridging physical and digital security domains for comprehensive protection. We assess and secure the physical perimeters that protect your critical digital assets — from access control to environmental design security.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Physical penetration testing</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Access control assessments</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Video surveillance review</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Environmental design security</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="reveal service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">05</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Cloud, Identity &amp; SaaS Security</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Secure cloud infrastructure and identity management solutions for modern distributed environments. We ensure your transition to the cloud doesn't introduce new vulnerabilities or misconfigurations — covering AWS, Azure, GCP, and major SaaS platforms.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Cloud architecture review</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>IAM strategy &amp; implementation</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>SaaS application security</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Zero Trust architecture</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="reveal d1 service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">06</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Medical Device &amp; IoT Security</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Specialized security assessments and controls for connected medical devices and IoT ecosystems. We protect patient safety and operational integrity in highly connected environments — including FDA pre/post-market guidance and network segmentation strategy.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Device vulnerability assessments</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Network segmentation strategy</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>FDA pre/post-market guidance</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>IoT asset discovery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 -->
+    <div class="reveal service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">07</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Application &amp; Web Risk Assessments</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Thorough security evaluations of web applications and APIs to identify and remediate vulnerabilities before they can be exploited. We integrate security into the development lifecycle through both dynamic and static analysis methodologies.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Dynamic &amp; static analysis</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>API security testing</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Secure SDLC integration</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Penetration testing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 -->
+    <div class="reveal d1 service-card p-8 md:p-10">
+      <div class="grid md:grid-cols-5 gap-8 items-start">
+        <div class="md:col-span-3">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(91,33,182,.4);font-weight:700;">08</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-4xl uppercase mb-4" style="font-weight:800;letter-spacing:-.01em;">Business Continuity &amp; Incident Readiness</h2>
+          <p style="color:var(--gray500);line-height:1.7;margin-bottom:20px;">Comprehensive planning and preparedness programs to ensure operational resilience during disruptions. We prepare your team to handle crises with confidence and clear procedures — from tabletop exercises to full disaster recovery planning.</p>
+          <a href="contact.html" class="btn-primary">Get Started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="md:col-span-2">
+          <div style="background:var(--p50);border-radius:12px;padding:24px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;">Key Deliverables</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Tabletop exercises</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Disaster recovery planning</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Business impact analysis</div>
+            <div class="check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Crisis communications</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-purple py-20 relative overflow-hidden">
+  <svg class="absolute opacity-10" style="width:400px;height:400px;top:-100px;right:-50px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1"/></svg>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class="font-display reveal text-5xl md:text-6xl uppercase leading-none text-white mb-6" style="font-weight:900;line-height:1.0;">Ready to Get<br/>Protected?</h2>
+    <p class="reveal d1 text-lg mb-10 max-w-xl mx-auto leading-relaxed" style="color:rgba(255,255,255,.7);">Schedule a consultation and let our team assess your current security posture.</p>
+    <div class="reveal d2 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="btn-white text-sm px-10 py-4">Schedule Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="programs.html" class="btn-outline text-sm px-10 py-4" style="border-color:rgba(255,255,255,.4);color:#fff;">View Programs</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT" class="h-10 w-auto mb-5" style="filter:brightness(0) invert(1);opacity:.9;"/><p style="color:rgba(255,255,255,.4);font-size:13px;line-height:1.7;">Ready. Reliable. Resilient.<br/>Veteran-owned cybersecurity built to endure.</p></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Pages</h4><ul><li class="mb-3"><a href="index.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Home</a></li><li class="mb-3"><a href="services.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Services</a></li><li class="mb-3"><a href="programs.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Programs</a></li><li class="mb-3"><a href="leadership.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Leadership</a></li><li><a href="contact.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Contact</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Services</h4><ul><li class="mb-3"><a href="services.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Governance &amp; Risk</a></li><li class="mb-3"><a href="services.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Compliance &amp; Assurance</a></li><li class="mb-3"><a href="services.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Incident Response</a></li><li class="mb-3"><a href="services.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Cloud Security</a></li><li><a href="services.html" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Application Security</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Contact</h4><ul><li class="mb-4"><a href="tel:+19312784651" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">(931) 278-4651</a></li><li class="mb-4"><a href="mailto:info@r3doubtsec.com" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">info@r3doubtsec.com</a></li><li style="color:rgba(255,255,255,.35);font-size:13px;">All 50 States</li></ul></div>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:24px;"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4" style="font-size:12px;color:rgba(255,255,255,.25);"><p>&copy; <span id="year"></span> R3DOUBT Security Group. All rights reserved.</p><div class="flex gap-6"><a href="#" style="color:rgba(255,255,255,.25);text-decoration:none;">Privacy Policy</a><a href="#" style="color:rgba(255,255,255,.25);text-decoration:none;">Terms</a></div></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); document.getElementById('ico-open').classList.toggle('hidden',open); document.getElementById('ico-close').classList.toggle('hidden',!open); });
+  const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
