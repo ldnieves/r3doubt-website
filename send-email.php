@@ -1,7 +1,39 @@
 <?php
+// Catch fatal errors and always return JSON
+set_exception_handler(function($e) {
+    http_response_code(500);
+    header('Content-Type: application/json');
+    echo json_encode(['error' => 'Server error. Please call us at (931) 278-4651.']);
+    exit;
+});
+register_shutdown_function(function() {
+    $err = error_get_last();
+    if ($err && in_array($err['type'], [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR])) {
+        if (!headers_sent()) {
+            http_response_code(500);
+            header('Content-Type: application/json');
+        }
+        echo json_encode(['error' => 'Server error. Please call us at (931) 278-4651.']);
+    }
+});
+
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/config.php';
+// Load config — fall back to inline values if file not yet on server
+if (file_exists(__DIR__ . '/config.php')) {
+    require_once __DIR__ . '/config.php';
+}
+if (!defined('POSTMARK_TOKEN'))   define('POSTMARK_TOKEN',   '7e47618c-d3dc-43e0-9d06-758fe5d59418');
+if (!defined('MAIL_FROM'))        define('MAIL_FROM',        'contact@r3doubtsec.com');
+if (!defined('MAIL_NOTIFY'))      define('MAIL_NOTIFY',      'contact@r3doubtsec.com');
+if (!defined('TURNSTILE_SECRET')) define('TURNSTILE_SECRET', '0x4AAAAAAC_FtFUr0fl1fJHE0QDone9TO9o');
+
+// PHP < 8.0 polyfill
+if (!function_exists('str_starts_with')) {
+    function str_starts_with(string $haystack, string $needle): bool {
+        return strncmp($haystack, $needle, strlen($needle)) === 0;
+    }
+}
 
 /* ─── 1. METHOD CHECK ────────────────────────────────────────────────────── */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -17,8 +49,11 @@ $allowed_origins = [
     'http://localhost:3001',
     'http://localhost:3000',
 ];
-$origin = $_SERVER['HTTP_ORIGIN'] ?? parse_url($_SERVER['HTTP_REFERER'] ?? '', PHP_URL_SCHEME)
-    . '://' . parse_url($_SERVER['HTTP_REFERER'] ?? '', PHP_URL_HOST);
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (empty($origin) && !empty($_SERVER['HTTP_REFERER'])) {
+    $p = parse_url($_SERVER['HTTP_REFERER']);
+    $origin = ($p['scheme'] ?? '') . '://' . ($p['host'] ?? '');
+}
 $origin_ok = false;
 foreach ($allowed_origins as $allowed) {
     if (str_starts_with($origin, $allowed)) { $origin_ok = true; break; }
