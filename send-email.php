@@ -53,7 +53,39 @@ if (!check_rate_limit($client_ip)) {
     exit;
 }
 
-/* ─── 4. SANITIZE & VALIDATE INPUT ──────────────────────────────────────── */
+/* ─── 4. TURNSTILE VERIFICATION ─────────────────────────────────────────── */
+$turnstile_token = trim($_POST['cf-turnstile-response'] ?? '');
+if (empty($turnstile_token)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Please complete the security check.']);
+    exit;
+}
+
+$ts = curl_init('https://challenges.cloudflare.com/turnstile/v0/siteverify');
+curl_setopt_array($ts, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => http_build_query([
+        'secret'   => TURNSTILE_SECRET,
+        'response' => $turnstile_token,
+        'remoteip' => $client_ip,
+    ]),
+    CURLOPT_SSL_VERIFYPEER => true,
+    CURLOPT_SSL_VERIFYHOST => 2,
+    CURLOPT_TIMEOUT        => 10,
+]);
+$ts_body   = curl_exec($ts);
+$ts_status = curl_getinfo($ts, CURLINFO_HTTP_CODE);
+curl_close($ts);
+
+$ts_result = json_decode($ts_body, true);
+if ($ts_status !== 200 || empty($ts_result['success'])) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Security check failed. Please refresh the page and try again.']);
+    exit;
+}
+
+/* ─── 5. SANITIZE & VALIDATE INPUT ──────────────────────────────────────── */
 $firstName    = substr(trim($_POST['firstName']    ?? ''), 0, 100);
 $lastName     = substr(trim($_POST['lastName']     ?? ''), 0, 100);
 $rawEmail     = trim($_POST['email'] ?? '');
