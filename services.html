@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | R3DOUBT Security Group</title>
+  <title>Cybersecurity Services | R3DOUBT Security Group</title>
   <meta name="description" content="8 specialized cybersecurity services — governance, compliance, incident response, cloud security, IoT, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="R3DOUBT Security Group" />
@@ -15,6 +15,22 @@
   <meta name="twitter:title" content="Services | R3DOUBT Security Group" />
   <meta name="twitter:description" content="8 specialized cybersecurity services — governance, compliance, incident response, cloud security, IoT, and more." />
   <meta name="twitter:image" content="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" />
+  <link rel="canonical" href="https://r3doubtsec.com/services.html" />
+  <meta property="og:url" content="https://r3doubtsec.com/services.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="R3DOUBT Security Group" />
+  <link rel="icon" type="image/jpeg" href="/brand_assets/Logo.jpeg" />
+  <link rel="apple-touch-icon" href="/brand_assets/Logo.jpeg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://r3doubtsec.com/"},
+      {"@type":"ListItem","position":2,"name":"Services","item":"https://r3doubtsec.com/services.html"}
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -343,6 +359,33 @@
   menuBtn.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); navbar.classList.toggle('menu-open',open); document.getElementById('ico-open').classList.toggle('hidden',open); document.getElementById('ico-close').classList.toggle('hidden',!open); });
   const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(91,33,182,.15);box-shadow:0 -8px 40px -8px rgba(91,33,182,.12);padding:18px 24px;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1;min-width:0;">
+      <svg style="flex-shrink:0;margin-top:1px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:#374151;line-height:1.6;margin:0;">We use cookies to enhance site functionality and analyze traffic. By continuing to browse, you accept our use of cookies. <a href="contact.html" style="color:#5B21B6;text-decoration:underline;font-weight:600;">Learn More</a></p>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="r3dCookieChoice('declined')" style="padding:9px 18px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:transparent;color:#6B7280;border:1.5px solid #D1D5DB;border-radius:6px;cursor:pointer;" onmouseover="this.style.borderColor='#5B21B6';this.style.color='#5B21B6'" onmouseout="this.style.borderColor='#D1D5DB';this.style.color='#6B7280'">Decline</button>
+      <button onclick="r3dCookieChoice('accepted')" style="padding:9px 20px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#5B21B6;color:#fff;border:none;border-radius:6px;cursor:pointer;box-shadow:0 4px 16px -4px rgba(91,33,182,.4);" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#3D1470'" onmouseout="this.style.transform='';this.style.background='#5B21B6'">Accept Cookies</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function(){
+    if(!localStorage.getItem('r3doubt_cookie_consent')){
+      var b=document.getElementById('cookie-banner');
+      if(b) b.style.display='block';
+    }
+  })();
+  function r3dCookieChoice(val){
+    localStorage.setItem('r3doubt_cookie_consent',val);
+    var b=document.getElementById('cookie-banner');
+    if(b){b.style.opacity='0';b.style.transition='opacity .3s ease';setTimeout(function(){b.style.display='none';},320);}
+  }
 </script>
 </body>
 </html>
