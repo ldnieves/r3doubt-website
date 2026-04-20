@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /send-email.php
+
+Sitemap: https://r3doubtsec.com/sitemap.xml
