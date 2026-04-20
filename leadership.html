@@ -26,6 +26,7 @@
     ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#f5f3ff;}::-webkit-scrollbar-thumb{background:var(--p700);border-radius:3px;}
     #navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:all .35s ease;border-bottom:1px solid transparent;}
     #navbar.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);padding:10px 0;border-color:rgba(91,33,182,.12);box-shadow:0 4px 24px -4px rgba(91,33,182,.1);}
+    #navbar.menu-open{background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(91,33,182,.1);box-shadow:0 4px 32px -4px rgba(91,33,182,.1);}
     .nav-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray700);text-decoration:none;padding:4px 0;position:relative;transition:color .2s;}
     .nav-link:hover,.nav-link.active{color:var(--p700);}
     .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--p700);transition:width .3s;}
@@ -309,7 +310,7 @@
   window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  menuBtn.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); document.getElementById('ico-open').classList.toggle('hidden',open); document.getElementById('ico-close').classList.toggle('hidden',!open); });
+  menuBtn.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); navbar.classList.toggle('menu-open',open); document.getElementById('ico-open').classList.toggle('hidden',open); document.getElementById('ico-close').classList.toggle('hidden',!open); });
   const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, {threshold:.08, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>

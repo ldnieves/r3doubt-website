@@ -171,6 +171,7 @@
     /* MOBILE MENU */
     #mobile-menu{display:none;}
     #mobile-menu.open{display:block;}
+    #navbar.menu-open{background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(91,33,182,.1);box-shadow:0 4px 32px -4px rgba(91,33,182,.1);}
 
     /* SOCIAL PROOF TICKER */
     .ticker-wrap{overflow:hidden;background:var(--p900);padding:10px 0;}
@@ -603,11 +604,13 @@
   const mobileMenu = document.getElementById('mobile-menu');
   menuBtn.addEventListener('click', () => {
     const open = mobileMenu.classList.toggle('open');
+    navbar.classList.toggle('menu-open', open);
     document.getElementById('ico-open').classList.toggle('hidden', open);
     document.getElementById('ico-close').classList.toggle('hidden', !open);
   });
   mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
+    navbar.classList.remove('menu-open');
     document.getElementById('ico-open').classList.remove('hidden');
     document.getElementById('ico-close').classList.add('hidden');
   }));
