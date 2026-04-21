@@ -23,10 +23,26 @@ const mime = {
 const server = createServer(async (req, res) => {
   let urlPath = req.url.split('?')[0];
   if (urlPath === '/') urlPath = '/index.html';
-  const filePath = join(__dirname, urlPath);
+
+  // Redirect /page.html → /page (clean URLs)
+  if (urlPath.endsWith('.html') && urlPath !== '/index.html') {
+    const clean = urlPath.slice(0, -5);
+    res.writeHead(301, { Location: clean });
+    res.end();
+    return;
+  }
+
+  let filePath = join(__dirname, urlPath);
+  let ext = extname(filePath);
+
+  // Try serving /page as /page.html
+  if (!ext) {
+    filePath = filePath + '.html';
+    ext = '.html';
+  }
+
   try {
     const data = await readFile(filePath);
-    const ext  = extname(filePath);
     res.writeHead(200, { 'Content-Type': mime[ext] || 'application/octet-stream' });
     res.end(data);
   } catch {
