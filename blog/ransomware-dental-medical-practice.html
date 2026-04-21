@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Is Your Dental or Medical Practice Ready for a Ransomware Attack? | R3DOUBT</title>
+  <meta name="description" content="Ransomware attacks on small healthcare practices are rising. Learn how attacks happen, what they really cost, and the 6 concrete steps you can take now."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="R3DOUBT Security Group" />
+  <meta property="og:title" content="Is Your Dental or Medical Practice Ready for a Ransomware Attack?" />
+  <meta property="og:description" content="Ransomware attacks on small healthcare practices are rising. Learn how attacks happen, what they really cost, and the 6 concrete steps you can take now." />
+  <meta property="og:image" content="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-04-13" />
+  <meta property="article:author" content="R3DOUBT Security Team" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Is Your Dental or Medical Practice Ready for a Ransomware Attack?" />
+  <meta name="twitter:description" content="Ransomware attacks on small healthcare practices are rising. Learn how attacks happen, what they really cost, and 6 steps to take now." />
+  <meta name="twitter:image" content="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" />
+  <link rel="canonical" href="https://r3doubtsec.com/blog/ransomware-dental-medical-practice" />
+  <meta property="og:url" content="https://r3doubtsec.com/blog/ransomware-dental-medical-practice" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="R3DOUBT Security Team" />
+  <link rel="icon" type="image/jpeg" href="/brand_assets/Logo.jpeg" />
+  <link rel="apple-touch-icon" href="/brand_assets/Logo.jpeg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Is Your Dental or Medical Practice Ready for a Ransomware Attack?",
+    "description": "Ransomware attacks on small healthcare practices are rising. Learn how attacks happen, what they really cost, and 6 concrete steps to take now.",
+    "datePublished": "2026-04-13",
+    "author": {"@type":"Organization","name":"R3DOUBT Security Team"},
+    "publisher": {"@type":"Organization","name":"R3DOUBT Security Group","url":"https://r3doubtsec.com"},
+    "mainEntityOfPage": "https://r3doubtsec.com/blog/ransomware-dental-medical-practice",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://r3doubtsec.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://r3doubtsec.com/blog"},
+        {"@type":"ListItem","position":3,"name":"Is Your Dental or Medical Practice Ready for a Ransomware Attack?","item":"https://r3doubtsec.com/blog/ransomware-dental-medical-practice"}
+      ]
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['"Barlow Condensed"','sans-serif'],body:['Inter','sans-serif'],mono:['"Space Mono"','monospace']}}}}</script>
+  <style>
+    :root{--p900:#1E0A4E;--p800:#3D1470;--p700:#5B21B6;--p600:#7C3AED;--p200:#C4B5FD;--p100:#EDE9FE;--p50:#F5F3FF;--black:#0A0A0A;--gray900:#111827;--gray700:#374151;--gray500:#6B7280;--gray300:#D1D5DB;--gray100:#F3F4F6;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:#fff;color:var(--black);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#f5f3ff;}::-webkit-scrollbar-thumb{background:var(--p700);border-radius:3px;}
+    #progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--p800),var(--p600));z-index:300;width:0%;transition:width .1s linear;}
+    #navbar{position:fixed;top:3px;left:0;right:0;z-index:200;padding:16px 0;transition:background .35s,padding .35s,border-color .35s;border-bottom:1px solid transparent;}
+    #navbar.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 0;border-color:rgba(91,33,182,.1);box-shadow:0 4px 32px -4px rgba(91,33,182,.1);}
+    #navbar.menu-open{background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(91,33,182,.1);}
+    .nav-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray700);text-decoration:none;padding:4px 0;position:relative;transition:color .2s;}
+    .nav-link:hover,.nav-link.active{color:var(--p700);}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--p700);transition:width .3s;}
+    .nav-link:hover::after,.nav-link.active::after{width:100%;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:var(--p700);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 4px 16px -4px rgba(91,33,182,.4);}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px -6px rgba(91,33,182,.5);background:var(--p800);}
+    .btn-primary:active{transform:translateY(1px);}
+    .btn-white{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:#fff;color:var(--p700);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 28px -6px rgba(0,0,0,.2);}
+    .btn-outline-white{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:2px solid rgba(255,255,255,.4);border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,border-color .2s;}
+    .btn-outline-white:hover{transform:translateY(-2px);background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);}
+    .pulse-dot{width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulseDot 2s ease-in-out infinite;}
+    @keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5);}50%{box-shadow:0 0 0 8px rgba(34,197,94,0);}}
+    footer{background:#111827;}
+    #mobile-menu{display:none;}#mobile-menu.open{display:block;}
+    .category-tag{display:inline-flex;align-items:center;padding:4px 12px;background:var(--p100);border:1px solid rgba(91,33,182,.2);border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);}
+
+    /* Article body typography */
+    .article-body h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,3vw,2rem);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;color:var(--p900);margin:2.5rem 0 1rem;}
+    .article-body h3{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;color:var(--black);margin:2rem 0 .75rem;display:flex;align-items:center;gap:10px;}
+    .article-body h3::before{content:'';width:18px;height:3px;background:var(--p700);border-radius:2px;flex-shrink:0;}
+    .article-body p{font-size:15px;line-height:1.85;color:var(--gray700);margin-bottom:1.25rem;}
+    .article-body ul{margin:1rem 0 1.5rem 0;padding:0;list-style:none;}
+    .article-body ul li{position:relative;padding:6px 0 6px 26px;font-size:14px;line-height:1.7;color:var(--gray700);}
+    .article-body ul li::before{content:'';position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;border:2px solid var(--p700);background:transparent;}
+    .article-body ol{margin:1rem 0 1.5rem 0;padding:0;list-style:none;counter-reset:ol-counter;}
+    .article-body ol li{position:relative;padding:6px 0 6px 32px;font-size:14px;line-height:1.7;color:var(--gray700);counter-increment:ol-counter;}
+    .article-body ol li::before{content:counter(ol-counter);position:absolute;left:0;top:6px;width:22px;height:22px;border-radius:6px;background:var(--p700);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;}
+    .article-body strong{color:var(--black);font-weight:600;}
+    .callout{background:var(--p50);border-left:3px solid var(--p700);border-radius:0 10px 10px 0;padding:20px 24px;margin:2rem 0;}
+    .callout p{margin:0;font-size:14px;color:var(--gray700);line-height:1.7;}
+    .callout strong{color:var(--p800);}
+
+    /* TOC */
+    .toc-link{display:block;padding:7px 12px 7px 14px;font-size:12px;font-weight:600;color:var(--gray500);text-decoration:none;border-left:2px solid var(--gray300);transition:color .2s,border-color .2s,background .2s;border-radius:0 6px 6px 0;}
+    .toc-link:hover{color:var(--p700);border-color:var(--p700);background:var(--p50);}
+    .toc-link.active{color:var(--p700);border-color:var(--p700);background:var(--p50);}
+
+    /* Share buttons */
+    .share-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:8px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border:1.5px solid var(--gray300);color:var(--gray700);background:#fff;cursor:pointer;text-decoration:none;transition:border-color .2s,color .2s,background .2s;}
+    .share-btn:hover{border-color:var(--p700);color:var(--p700);background:var(--p50);}
+
+    /* Step cards */
+    .step-card{background:#fff;border:1px solid rgba(91,33,182,.1);border-radius:14px;padding:24px 28px;margin-bottom:16px;transition:border-color .25s,box-shadow .25s;}
+    .step-card:hover{border-color:rgba(91,33,182,.3);box-shadow:0 12px 32px -8px rgba(91,33,182,.12);}
+    .step-num{width:36px;height:36px;border-radius:10px;background:var(--p700);color:#fff;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-bottom:12px;}
+    .check-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(91,33,182,.06);font-size:13px;color:var(--gray700);line-height:1.6;}
+    .check-item:last-child{border-bottom:none;}
+    .cta-purple{background:linear-gradient(135deg,var(--p900) 0%,var(--p700) 100%);}
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="/"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT" class="h-16 w-auto object-contain"/></a>
+      <div class="hidden md:flex items-center gap-8 lg:gap-10">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/services" class="nav-link">Services</a>
+        <a href="/programs" class="nav-link">Programs</a>
+        <a href="/leadership" class="nav-link">Leadership</a>
+        <a href="/blog" class="nav-link active">Blog</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <div class="flex items-center gap-2"><div class="pulse-dot"></div><span class="text-xs font-semibold tracking-wide" style="color:#16a34a;">Available 24/7</span></div>
+        <a href="/contact" class="btn-primary">Schedule Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <button id="menu-btn" class="md:hidden p-2" style="color:var(--gray700);" aria-label="Menu">
+        <svg id="ico-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="ico-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden py-6 border-t mt-2 space-y-5" style="border-color:rgba(91,33,182,.1);">
+      <a href="/" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Home</a>
+      <a href="/services" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Services</a>
+      <a href="/programs" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Programs</a>
+      <a href="/leadership" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Leadership</a>
+      <a href="/blog" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--p700);">Blog</a>
+      <a href="/contact" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Contact</a>
+      <a href="/contact" class="btn-primary w-full justify-center mt-4">Schedule Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<!-- POST HEADER -->
+<header style="background:linear-gradient(135deg,var(--p900) 0%,#2D1060 60%,var(--p700) 100%);padding:120px 0 64px;position:relative;overflow:hidden;">
+  <svg class="absolute opacity-8" style="width:600px;height:600px;top:-150px;right:-150px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1"/></svg>
+  <svg class="absolute opacity-5" style="width:300px;height:300px;bottom:-80px;left:-60px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1.5"/></svg>
+  <div class="max-w-4xl mx-auto px-6 relative">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 mb-8" style="font-size:12px;color:rgba(255,255,255,.4);">
+      <a href="/" style="color:rgba(255,255,255,.4);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Home</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <a href="/blog" style="color:rgba(255,255,255,.4);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Blog</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <span style="color:rgba(255,255,255,.6);">Article</span>
+    </nav>
+    <!-- Categories -->
+    <div class="flex flex-wrap gap-2 mb-6">
+      <span style="display:inline-flex;align-items:center;padding:4px 14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);">Healthcare Security</span>
+      <span style="display:inline-flex;align-items:center;padding:4px 14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);">Ransomware</span>
+      <span style="display:inline-flex;align-items:center;padding:4px 14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);">Threat Intelligence</span>
+    </div>
+    <!-- Title -->
+    <h1 class="font-display uppercase text-white mb-4 leading-none" style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-.02em;line-height:1.05;">Is Your Dental or Medical Practice Ready for a Ransomware Attack?</h1>
+    <p style="font-size:1.05rem;color:rgba(255,255,255,.55);font-style:italic;margin-bottom:28px;line-height:1.6;">Because the attackers already are.</p>
+    <!-- Meta row -->
+    <div class="flex flex-wrap items-center gap-5" style="padding-top:24px;border-top:1px solid rgba(255,255,255,.12);">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);">RS</div>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:#fff;">R3DOUBT Security Team</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4);">Cybersecurity Experts</div>
+        </div>
+      </div>
+      <div style="width:1px;height:32px;background:rgba(255,255,255,.15);"></div>
+      <div class="flex items-center gap-4" style="font-size:12px;color:rgba(255,255,255,.45);">
+        <span class="flex items-center gap-2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>April 13, 2026</span>
+        <span class="flex items-center gap-2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>12 min read</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE LAYOUT -->
+<div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+  <div class="lg:grid lg:grid-cols-12 lg:gap-14">
+
+    <!-- SIDEBAR: Table of Contents -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div style="position:sticky;top:100px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--p700);margin-bottom:16px;padding-left:14px;">Table of Contents</div>
+        <nav id="toc">
+          <a href="#intro" class="toc-link">Introduction</a>
+          <a href="#threat-landscape" class="toc-link">The Current Threat Landscape</a>
+          <a href="#how-attacks-happen" class="toc-link">How Ransomware Attacks Happen</a>
+          <a href="#real-cost" class="toc-link">The Real Cost of Ransomware</a>
+          <a href="#are-you-ready" class="toc-link">Are You Ready?</a>
+          <a href="#what-to-do" class="toc-link">What You Can Do Now</a>
+          <a href="#bottom-line" class="toc-link">The Bottom Line</a>
+        </nav>
+
+        <!-- Share -->
+        <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--gray300);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray500);margin-bottom:14px;">Share Article</div>
+          <div class="flex flex-col gap-2">
+            <a href="#" onclick="shareLinkedIn()" class="share-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+            <a href="#" onclick="shareX()" class="share-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</a>
+            <button onclick="copyLink()" class="share-btn" id="copy-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy Link</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN ARTICLE -->
+    <main class="lg:col-span-9 article-body">
+
+      <!-- Mobile TOC -->
+      <details class="lg:hidden mb-8" style="background:var(--p50);border:1px solid rgba(91,33,182,.15);border-radius:12px;padding:16px 20px;">
+        <summary style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;">Table of Contents <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <nav style="margin-top:14px;display:flex;flex-direction:column;gap:2px;">
+          <a href="#intro" style="font-size:13px;color:var(--p700);text-decoration:none;padding:5px 0;border-bottom:1px solid rgba(91,33,182,.08);">Introduction</a>
+          <a href="#threat-landscape" style="font-size:13px;color:var(--gray700);text-decoration:none;padding:5px 0;border-bottom:1px solid rgba(91,33,182,.08);">The Current Threat Landscape</a>
+          <a href="#how-attacks-happen" style="font-size:13px;color:var(--gray700);text-decoration:none;padding:5px 0;border-bottom:1px solid rgba(91,33,182,.08);">How Ransomware Attacks Happen</a>
+          <a href="#real-cost" style="font-size:13px;color:var(--gray700);text-decoration:none;padding:5px 0;border-bottom:1px solid rgba(91,33,182,.08);">The Real Cost of Ransomware</a>
+          <a href="#are-you-ready" style="font-size:13px;color:var(--gray700);text-decoration:none;padding:5px 0;border-bottom:1px solid rgba(91,33,182,.08);">Are You Ready?</a>
+          <a href="#what-to-do" style="font-size:13px;color:var(--gray700);text-decoration:none;padding:5px 0;border-bottom:1px solid rgba(91,33,182,.08);">What You Can Do Now</a>
+          <a href="#bottom-line" style="font-size:13px;color:var(--gray700);text-decoration:none;padding:5px 0;">The Bottom Line</a>
+        </nav>
+      </details>
+
+      <!-- Introduction -->
+      <section id="intro">
+        <p style="font-size:1.05rem;line-height:1.9;color:var(--gray700);margin-bottom:1.5rem;">Right now, somewhere in the United States, a dental office or medical practice is being compromised. Not a large hospital system. Not a corporate healthcare network. <strong>A small practice — just like yours.</strong></p>
+        <p>Ransomware attacks on healthcare providers have become increasingly sophisticated and frequent. These attacks don't just disrupt operations; they can compromise patient data, delay critical care, and result in significant financial losses that take years to recover from.</p>
+
+        <div class="callout">
+          <p><strong>Key statistic:</strong> Healthcare was the most targeted industry for ransomware attacks in 2024, with small-to-mid-size practices accounting for the majority of incidents — precisely because they are perceived as easier targets with fewer defenses.</p>
+        </div>
+      </section>
+
+      <!-- Threat Landscape -->
+      <section id="threat-landscape">
+        <h2>The Current Threat Landscape</h2>
+        <p>Small to medium-sized dental and medical practices have become prime targets for organized cybercriminal groups. The reason is straightforward: high-value data, regulatory exposure, and limited defenses create an ideal environment for extortion.</p>
+        <p>Attackers specifically target practices that have:</p>
+        <ul>
+          <li><strong>Limited IT resources and security expertise</strong> — most small practices have no dedicated security staff</li>
+          <li><strong>Valuable patient data</strong> — medical records, insurance information, and payment details command high prices on criminal markets</li>
+          <li><strong>Legacy systems</strong> — older practice management software and medical devices that cannot be easily updated</li>
+          <li><strong>Regulatory exposure</strong> — HIPAA breach notification requirements create leverage for attackers demanding ransoms to prevent disclosure</li>
+          <li><strong>Operational urgency</strong> — a practice that cannot access patient records or appointment schedules is under immediate pressure to pay</li>
+        </ul>
+        <p>Attackers understand that a dental or medical practice with 3 staff members and no IT department is fundamentally different from a hospital — and they price their ransoms accordingly, making payment feel like the easiest option.</p>
+      </section>
+
+      <!-- How Attacks Happen -->
+      <section id="how-attacks-happen">
+        <h2>How Ransomware Attacks Happen</h2>
+        <p>Most ransomware attacks on healthcare practices follow a predictable progression. Understanding the stages helps you identify where your defenses need to be strongest.</p>
+
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3 style="margin:0 0 8px;font-size:15px;font-weight:700;color:var(--black);">Initial Access</h3>
+          <p style="margin:0;font-size:13px;color:var(--gray500);line-height:1.7;">The attacker gets a foothold through phishing emails targeting staff, stolen or guessed credentials, or exploitation of unpatched vulnerabilities in public-facing systems. A single click on a malicious email attachment is often all it takes.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3 style="margin:0 0 8px;font-size:15px;font-weight:700;color:var(--black);">Lateral Movement</h3>
+          <p style="margin:0;font-size:13px;color:var(--gray500);line-height:1.7;">Once inside, the attacker quietly moves through your network — often for days or weeks — identifying valuable systems, exfiltrating patient data, and positioning for maximum impact before triggering the attack.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3 style="margin:0 0 8px;font-size:15px;font-weight:700;color:var(--black);">Encryption</h3>
+          <p style="margin:0;font-size:13px;color:var(--gray500);line-height:1.7;">All accessible files — patient records, financial data, scheduling systems, imaging archives — are encrypted simultaneously, rendering them completely inaccessible. Backups connected to the network are often encrypted too.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3 style="margin:0 0 8px;font-size:15px;font-weight:700;color:var(--black);">Extortion</h3>
+          <p style="margin:0;font-size:13px;color:var(--gray500);line-height:1.7;">A ransom demand arrives — typically between $10,000 and $250,000 for a small practice — with a deadline and a threat to publish stolen patient data if not paid. The clock starts ticking immediately.</p>
+        </div>
+      </section>
+
+      <!-- Real Cost -->
+      <section id="real-cost">
+        <h2>The Real Cost of Ransomware</h2>
+        <p>The ransom demand is only the beginning. The true cost of a ransomware attack extends far beyond whatever amount ends up being paid — and many practices underestimate this until they're living through it.</p>
+
+        <ul>
+          <li><strong>Downtime</strong> — Operations can be paralyzed for days to weeks. Cancelled appointments, rescheduled procedures, and inability to access patient histories all compound immediately.</li>
+          <li><strong>Recovery costs</strong> — IT forensics, system restoration, data recovery, and new hardware routinely cost more than the ransom itself.</li>
+          <li><strong>HIPAA penalties</strong> — Ransomware events are presumed HIPAA breaches. Notification requirements apply, and investigations can result in significant fines — especially if reasonable safeguards weren't in place.</li>
+          <li><strong>Reputation damage</strong> — Patients who learn their health data was compromised don't always return. Referral relationships can be damaged permanently.</li>
+          <li><strong>Legal exposure</strong> — Class action lawsuits from affected patients are increasingly common following healthcare data breaches.</li>
+          <li><strong>Insurance complications</strong> — Many cyber insurance policies have narrow coverage, exclusions for negligence, or sublimits that don't cover the full recovery cost.</li>
+        </ul>
+
+        <div class="callout">
+          <p><strong>Industry data:</strong> The average total cost of a healthcare data breach in 2024 exceeded $10 million — and for small practices, even a fraction of that figure can be practice-ending.</p>
+        </div>
+      </section>
+
+      <!-- Are You Ready? -->
+      <section id="are-you-ready">
+        <h2>Are You Ready?</h2>
+        <p>Most practices believe they are better protected than they actually are. Answer honestly:</p>
+
+        <div style="background:#fff;border:1px solid rgba(91,33,182,.12);border-radius:14px;padding:24px 28px;margin:1.5rem 0;">
+          <div class="check-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>Do you have regular, <strong>tested</strong> backups of all critical data — stored offline or off-network?</span>
+          </div>
+          <div class="check-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>Are your systems and software current on security patches — including your practice management software?</span>
+          </div>
+          <div class="check-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>Does every staff member who uses a computer receive regular security awareness training?</span>
+          </div>
+          <div class="check-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>Do you have a documented incident response plan — and does your staff know what to do?</span>
+          </div>
+          <div class="check-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>Is your network segmented so a compromise in one area can't spread freely to everything else?</span>
+          </div>
+          <div class="check-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>Do you actively monitor your network for suspicious activity — not just antivirus, but real monitoring?</span>
+          </div>
+        </div>
+
+        <p><strong>If you answered "no" to any of these, your practice carries meaningful risk right now.</strong> Not theoretical risk — actual exposure to an attack that could shut your doors.</p>
+      </section>
+
+      <!-- What to Do -->
+      <section id="what-to-do">
+        <h2>What You Can Do Now</h2>
+        <p>These six actions address the most common points of failure for small healthcare practices. Start with what you can implement immediately and work toward the more complex controls.</p>
+
+        <h3>Implement Strong Access Controls</h3>
+        <ul>
+          <li>Enable multi-factor authentication (MFA) on every account — email, EHR, billing, and remote access</li>
+          <li>Enforce strong, unique passwords managed through a password manager</li>
+          <li>Apply the principle of least privilege — staff should only access what their role requires</li>
+          <li>Disable or remove accounts for former employees immediately</li>
+        </ul>
+
+        <h3>Keep Systems Updated</h3>
+        <ul>
+          <li>Apply security patches promptly — most ransomware exploits known, patched vulnerabilities</li>
+          <li>Keep operating systems, browsers, and all practice software current</li>
+          <li>Identify and isolate legacy systems (old imaging devices, outdated Windows systems) that cannot be updated</li>
+        </ul>
+
+        <h3>Protect Your Backups</h3>
+        <ul>
+          <li>Maintain daily backups of all patient records and critical data</li>
+          <li>Store at least one copy offline or in a separate environment that cannot be reached from your main network</li>
+          <li>Test your backups regularly — a backup you've never restored is a backup you can't rely on</li>
+        </ul>
+
+        <h3>Train Your Staff</h3>
+        <ul>
+          <li>Conduct security awareness training at minimum twice per year</li>
+          <li>Run phishing simulations to build real recognition skills, not just theoretical knowledge</li>
+          <li>Establish a clear protocol for reporting suspicious emails or activity — and make it easy to report</li>
+        </ul>
+
+        <h3>Monitor and Plan for Incidents</h3>
+        <ul>
+          <li>Implement endpoint detection beyond basic antivirus</li>
+          <li>Document an incident response plan: who to call, what to shut down, how to notify patients if required</li>
+          <li>Know your cyber insurer's breach hotline number before you need it</li>
+        </ul>
+
+        <h3>Get an Independent Assessment</h3>
+        <ul>
+          <li>Engage a cybersecurity firm for a security risk assessment — HIPAA requires this anyway</li>
+          <li>Work with a provider who understands healthcare-specific compliance requirements, not just general IT</li>
+          <li>Review your cyber insurance policy for ransomware-specific coverage and exclusions</li>
+        </ul>
+      </section>
+
+      <!-- Bottom Line -->
+      <section id="bottom-line">
+        <h2>The Bottom Line</h2>
+        <p>Ransomware attacks on healthcare providers are not a matter of "if" but "when." The question is whether your practice will be prepared when it happens — or whether you'll be making urgent decisions under maximum pressure with no plan and no resources in place.</p>
+        <p>The practices that survive these attacks are the ones that treated security as an operational necessity before they needed it. The ones that don't often don't survive at all.</p>
+
+        <div class="callout">
+          <p><strong>Don't wait for an attack to expose your vulnerabilities.</strong> Take action today to protect your practice, your staff, and your patients. Your security is not just about compliance — it is about patient safety and the long-term viability of your practice.</p>
+        </div>
+      </section>
+
+      <!-- Mobile Share -->
+      <div class="lg:hidden mt-10 pt-8" style="border-top:1px solid var(--gray300);">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray500);margin-bottom:14px;">Share This Article</div>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" onclick="shareLinkedIn()" class="share-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+          <a href="#" onclick="shareX()" class="share-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</a>
+          <button onclick="copyLink()" class="share-btn" id="copy-btn-mobile"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy Link</button>
+        </div>
+      </div>
+
+      <!-- Author Card -->
+      <div style="margin-top:48px;padding:28px;border:1px solid rgba(91,33,182,.12);border-radius:14px;background:var(--p50);">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="background:linear-gradient(135deg,var(--p800),var(--p600));font-size:16px;">RS</div>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:var(--black);margin-bottom:2px;">R3DOUBT Security Team</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p700);margin-bottom:10px;">Cybersecurity Experts</div>
+            <p style="font-size:13px;color:var(--gray500);line-height:1.7;margin:0;">Our team of veteran operators, forensic specialists, and enterprise security practitioners brings real-world offensive and defensive experience to every engagement. We serve healthcare providers, government contractors, and enterprise clients across all 50 states.</p>
+            <div class="flex gap-3 mt-4">
+              <a href="/leadership" style="font-size:12px;font-weight:700;color:var(--p700);text-decoration:none;letter-spacing:.05em;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Meet the Team &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- WEBINAR CTA -->
+<section style="background:var(--p50);border-top:1px solid rgba(91,33,182,.1);border-bottom:1px solid rgba(91,33,182,.1);padding:60px 0;">
+  <div class="max-w-4xl mx-auto px-6">
+    <div style="background:#fff;border:1px solid rgba(91,33,182,.15);border-radius:16px;padding:40px;box-shadow:0 8px 40px -12px rgba(91,33,182,.12);">
+      <div class="grid md:grid-cols-3 gap-6 items-center">
+        <div class="md:col-span-2">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:var(--p100);border:1px solid rgba(91,33,182,.2);border-radius:100px;padding:4px 14px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);margin-bottom:14px;">Upcoming Live Event</div>
+          <h3 class="font-display uppercase mb-3" style="font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;letter-spacing:-.01em;line-height:1.1;">Is Your Practice Ready for the Next Threat?</h3>
+          <p style="font-size:14px;color:var(--gray500);line-height:1.7;margin-bottom:16px;">Webinar coming soon — registration is open now. Seats are limited. Attendees also receive a free security self-assessment checklist — actionable from day one.</p>
+          <div class="flex flex-wrap gap-3">
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--gray500);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Registration Open</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--gray500);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Free Assessment Included</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--gray500);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Limited Seats</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-start md:items-center gap-3">
+          <a href="/contact" class="btn-primary w-full md:w-auto justify-center">Register Now <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <span style="font-size:11px;color:var(--gray500);text-align:center;">No cost to register</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSESSMENT CTA -->
+<section class="cta-purple py-20 relative overflow-hidden">
+  <svg class="absolute opacity-10" style="width:400px;height:400px;top:-100px;right:-50px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1"/></svg>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class="font-display text-5xl md:text-6xl uppercase leading-none text-white mb-6" style="font-weight:900;line-height:1.0;">Secure Your<br/>Organization Today</h2>
+    <p class="text-lg mb-10 max-w-xl mx-auto leading-relaxed" style="color:rgba(255,255,255,.7);">Don't wait for a breach to discover your vulnerabilities. Partner with R3DOUBT's veteran-led team for a comprehensive security assessment.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact" class="btn-white text-sm px-10 py-4">Schedule Assessment <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="/services" class="btn-outline-white text-sm px-10 py-4">View Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT" class="h-10 w-auto mb-5" style="filter:brightness(0) invert(1);opacity:.9;"/><p style="color:rgba(255,255,255,.4);font-size:13px;line-height:1.7;">Ready. Reliable. Resilient.<br/>Veteran-owned cybersecurity built to endure.</p><div class="flex gap-3 mt-6"><a href="https://www.linkedin.com/company/r3doubt-security/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(91,33,182,.6)';this.style.color='#C4B5FD'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://x.com/R3DOUBTSEC" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(91,33,182,.6)';this.style.color='#C4B5FD'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://www.facebook.com/people/R3Doubt-Security/61588599841554/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(91,33,182,.6)';this.style.color='#C4B5FD'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Pages</h4><ul><li class="mb-3"><a href="/" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Home</a></li><li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Services</a></li><li class="mb-3"><a href="/programs" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Programs</a></li><li class="mb-3"><a href="/leadership" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Leadership</a></li><li class="mb-3"><a href="/blog" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Blog</a></li><li><a href="/contact" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Contact</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Services</h4><ul><li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Governance &amp; Risk</a></li><li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Compliance &amp; Assurance</a></li><li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Incident Response</a></li><li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Cloud Security</a></li><li><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Application Security</a></li></ul></div>
+      <div><h4 style="color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin-bottom:20px;">Contact</h4><ul><li class="mb-4"><a href="tel:+19312784651" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">(931) 278-4651</a></li><li class="mb-4"><a href="mailto:info@r3doubtsec.com" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">info@r3doubtsec.com</a></li><li style="color:rgba(255,255,255,.35);font-size:13px;">All 50 States</li></ul></div>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:24px;"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4" style="font-size:12px;color:rgba(255,255,255,.25);"><p>&copy; <span id="year"></span> R3DOUBT Security Group. All rights reserved.</p><div class="flex gap-6"><a href="#" style="color:rgba(255,255,255,.25);text-decoration:none;">Privacy Policy</a><a href="#" style="color:rgba(255,255,255,.25);text-decoration:none;">Terms</a></div></div>
+  </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(91,33,182,.15);box-shadow:0 -8px 40px -8px rgba(91,33,182,.12);padding:18px 24px;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1;min-width:0;">
+      <svg style="flex-shrink:0;margin-top:1px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:#374151;line-height:1.6;margin:0;">We use cookies to enhance site functionality and analyze traffic. By continuing to browse, you accept our use of cookies.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="r3dCookieChoice('declined')" style="padding:9px 18px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:transparent;color:#6B7280;border:1.5px solid #D1D5DB;border-radius:6px;cursor:pointer;" onmouseover="this.style.borderColor='#5B21B6';this.style.color='#5B21B6'" onmouseout="this.style.borderColor='#D1D5DB';this.style.color='#6B7280'">Decline</button>
+      <button onclick="r3dCookieChoice('accepted')" style="padding:9px 20px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#5B21B6;color:#fff;border:none;border-radius:6px;cursor:pointer;box-shadow:0 4px 16px -4px rgba(91,33,182,.4);" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#3D1470'" onmouseout="this.style.transform='';this.style.background='#5B21B6'">Accept Cookies</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Progress bar
+  window.addEventListener('scroll', () => {
+    const d = document.documentElement;
+    const pct = (d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100;
+    document.getElementById('progress-bar').style.width = pct + '%';
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  }, {passive:true});
+
+  const navbar = document.getElementById('navbar');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); navbar.classList.toggle('menu-open',open); document.getElementById('ico-open').classList.toggle('hidden',open); document.getElementById('ico-close').classList.toggle('hidden',!open); });
+
+  // Active TOC highlight
+  const sections = document.querySelectorAll('section[id], header[id]');
+  const tocLinks = document.querySelectorAll('#toc .toc-link');
+  const tocObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('#toc a[href="#' + e.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('section[id]').forEach(s => tocObs.observe(s));
+
+  // Share functions
+  function shareLinkedIn(){ window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=500'); return false; }
+  function shareX(){ window.open('https://x.com/intent/tweet?text='+encodeURIComponent('Is Your Dental or Medical Practice Ready for a Ransomware Attack?')+'&url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400'); return false; }
+  function copyLink(){
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      ['copy-btn','copy-btn-mobile'].forEach(id => { var b=document.getElementById(id); if(b){ var orig=b.innerHTML; b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Copied!'; setTimeout(function(){b.innerHTML=orig;},2000); } });
+    });
+  }
+
+  // Cookie
+  (function(){ if(!localStorage.getItem('r3doubt_cookie_consent')){ var b=document.getElementById('cookie-banner'); if(b) b.style.display='block'; } })();
+  function r3dCookieChoice(val){ localStorage.setItem('r3doubt_cookie_consent',val); var b=document.getElementById('cookie-banner'); if(b){b.style.opacity='0';b.style.transition='opacity .3s ease';setTimeout(function(){b.style.display='none';},320);} }
+</script>
+</body>
+</html>
