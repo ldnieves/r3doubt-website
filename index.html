@@ -67,7 +67,7 @@
     #progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--p800),var(--p600));z-index:200;width:0%;transition:width .1s linear;}
 
     /* NAV */
-    #navbar{position:fixed;top:3px;left:0;right:0;z-index:100;padding:16px 0;transition:background .35s,padding .35s,border-color .35s;border-bottom:1px solid transparent;}
+    #navbar{position:fixed;top:3px;left:0;right:0;z-index:100;padding:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(105,52,156,.1);box-shadow:0 4px 32px -4px rgba(105,52,156,.08);transition:box-shadow .35s,border-color .35s;}
     #navbar.scrolled{background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 0;border-color:rgba(105,52,156,.1);box-shadow:0 4px 32px -4px rgba(105,52,156,.1);}
     .nav-link{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray700);text-decoration:none;padding:4px 0;position:relative;transition:color .2s;}
     .nav-link:hover{color:var(--p700);}
