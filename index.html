@@ -51,8 +51,8 @@
   <script>tailwind.config={theme:{extend:{fontFamily:{display:['"Barlow Condensed"','sans-serif'],body:['Inter','sans-serif'],mono:['"Space Mono"','monospace']}}}}</script>
   <style>
     :root {
-      --p900:#1E0A4E; --p800:#3D1470; --p700:#5B21B6; --p600:#7C3AED;
-      --p500:#8B5CF6; --p200:#C4B5FD; --p100:#EDE9FE; --p50:#F5F3FF;
+      --p900:#341856; --p800:#4F2677; --p700:#69349C; --p600:#7D44B2;
+      --p500:#9158C5; --p200:#D4AAEE; --p100:#EDD9F8; --p50:#F7F0FC;
       --black:#0A0A0A; --gray900:#111827; --gray700:#374151;
       --gray500:#6B7280; --gray300:#D1D5DB; --gray100:#F3F4F6; --white:#FFFFFF;
     }
@@ -68,40 +68,40 @@
 
     /* NAV */
     #navbar{position:fixed;top:3px;left:0;right:0;z-index:100;padding:16px 0;transition:background .35s,padding .35s,border-color .35s;border-bottom:1px solid transparent;}
-    #navbar.scrolled{background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 0;border-color:rgba(91,33,182,.1);box-shadow:0 4px 32px -4px rgba(91,33,182,.1);}
-    .nav-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray700);text-decoration:none;padding:4px 0;position:relative;transition:color .2s;}
+    #navbar.scrolled{background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:10px 0;border-color:rgba(105,52,156,.1);box-shadow:0 4px 32px -4px rgba(105,52,156,.1);}
+    .nav-link{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray700);text-decoration:none;padding:4px 0;position:relative;transition:color .2s;}
     .nav-link:hover{color:var(--p700);}
     .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--p700);transition:width .3s ease;}
     .nav-link:hover::after,.nav-link.active::after{width:100%;}
     .nav-link.active{color:var(--p700);}
 
     /* BUTTONS */
-    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:var(--p700);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 4px 16px -4px rgba(91,33,182,.4);position:relative;overflow:hidden;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:var(--p700);color:#fff;font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 4px 16px -4px rgba(105,52,156,.4);position:relative;overflow:hidden;}
     .btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s;}
     .btn-primary:hover::after{transform:translateX(100%);}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px -6px rgba(91,33,182,.55);background:var(--p800);}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px -6px rgba(105,52,156,.55);background:var(--p800);}
     .btn-primary:active{transform:translateY(1px);}
     .btn-primary:focus-visible{outline:2px solid var(--p600);outline-offset:3px;}
-    .btn-outline{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;color:var(--p700);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--p700);border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,color .2s;}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;color:var(--p700);font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--p700);border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,color .2s;}
     .btn-outline:hover{transform:translateY(-2px);background:var(--p700);color:#fff;}
     .btn-outline:active{transform:translateY(1px);}
-    .btn-white{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:#fff;color:var(--p700);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;}
-    .btn-white::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(91,33,182,.1) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s;}
+    .btn-white{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:#fff;color:var(--p700);font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;}
+    .btn-white::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(105,52,156,.1) 50%,transparent 60%);transform:translateX(-100%);transition:transform .55s;}
     .btn-white:hover::after{transform:translateX(100%);}
     .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 28px -6px rgba(0,0,0,.2);}
     .btn-white:active{transform:translateY(1px);}
 
     /* SECTION LABEL */
-    .section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--p700);}
+    .section-label{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--p700);}
     .section-label::before,.section-label::after{content:'';width:24px;height:2px;background:var(--p700);}
 
     /* CARDS */
-    .card{background:#fff;border:1px solid rgba(91,33,182,.12);border-radius:12px;transition:transform .3s,box-shadow .3s,border-color .3s;}
-    .card:hover{transform:translateY(-4px);border-color:rgba(91,33,182,.35);box-shadow:0 20px 48px -12px rgba(91,33,182,.18);}
+    .card{background:#fff;border:1px solid rgba(105,52,156,.12);border-radius:12px;transition:transform .3s,box-shadow .3s,border-color .3s;}
+    .card:hover{transform:translateY(-4px);border-color:rgba(105,52,156,.35);box-shadow:0 20px 48px -12px rgba(105,52,156,.18);}
     .card-purple{background:var(--p50);border:2px solid var(--p200);}
 
     /* ICON BADGE */
-    .icon-badge{width:44px;height:44px;border-radius:10px;background:var(--p100);border:1px solid rgba(91,33,182,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,border-color .2s;}
+    .icon-badge{width:44px;height:44px;border-radius:10px;background:var(--p100);border:1px solid rgba(105,52,156,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,border-color .2s;}
     .card:hover .icon-badge{background:var(--p700);border-color:var(--p700);}
     .card:hover .icon-badge svg{stroke:#fff;}
 
@@ -113,7 +113,7 @@
     .marquee-inner{display:flex;gap:10px;width:max-content;animation:marquee 35s linear infinite;}
     .marquee-inner:hover{animation-play-state:paused;}
     @keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-    .cert-pill{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:#fff;border:1px solid rgba(91,33,182,.2);border-radius:100px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p700);white-space:nowrap;transition:background .2s,color .2s,border-color .2s;cursor:default;}
+    .cert-pill{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:#fff;border:1px solid rgba(105,52,156,.2);border-radius:100px;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p700);white-space:nowrap;transition:background .2s,color .2s,border-color .2s;cursor:default;}
     .cert-pill:hover{background:var(--p700);color:#fff;border-color:var(--p700);}
 
     /* REVEAL */
@@ -140,7 +140,7 @@
     .hero-headline{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,3.6vw,4.2rem);font-weight:900;line-height:.97;letter-spacing:-.025em;text-transform:uppercase;}
 
     /* HERO EYEBROW */
-    .hero-eyebrow-text{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--p700);}
+    .hero-eyebrow-text{font-family:'Space Mono',monospace;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--p700);}
 
     /* TYPEWRITER */
     .typewriter-word{color:var(--p700);}
@@ -149,7 +149,7 @@
 
     /* STAT CARDS */
     .stat-num{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,3.5vw,3.2rem);font-weight:800;line-height:1;color:var(--p700);}
-    .stat-card{position:absolute;background:#fff;border:1px solid rgba(91,33,182,.14);border-radius:14px;box-shadow:0 8px 32px -8px rgba(91,33,182,.18);padding:18px 22px;}
+    .stat-card{position:absolute;background:#fff;border:1px solid rgba(105,52,156,.14);border-radius:14px;box-shadow:0 8px 32px -8px rgba(105,52,156,.18);padding:18px 22px;}
     .stat-card-1{animation:float1 5s ease-in-out infinite;}
     .stat-card-2{animation:float2 6s ease-in-out infinite .8s;}
     .stat-card-3{animation:float3 5.5s ease-in-out infinite .3s;}
@@ -170,41 +170,41 @@
     @keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5);}50%{box-shadow:0 0 0 8px rgba(34,197,94,0);}}
 
     /* SERVICE NUM */
-    .service-num-dark{font-family:'Space Mono',monospace;font-size:10px;color:rgba(91,33,182,.3);font-weight:700;}
+    .service-num-dark{font-family:'Space Mono',monospace;font-size:15px;color:rgba(105,52,156,.3);font-weight:700;}
 
     /* DIVIDER */
-    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(91,33,182,.15),transparent);}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(105,52,156,.15),transparent);}
 
     /* STATS BG */
     .stats-section{background:linear-gradient(135deg,var(--p900) 0%,var(--p800) 50%,var(--p700) 100%);}
 
     /* PENTA PATTERN */
-    .penta-bg{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpolygon points='30,2 58,22 48,54 12,54 2,22' fill='none' stroke='rgba(91,33,182,0.06)' stroke-width='1'/%3E%3C/svg%3E");}
+    .penta-bg{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpolygon points='30,2 58,22 48,54 12,54 2,22' fill='none' stroke='rgba(105,52,156,0.06)' stroke-width='1'/%3E%3C/svg%3E");}
 
     /* LEADER CARD */
-    .leader-card{position:relative;overflow:hidden;border-radius:12px;border:1px solid rgba(91,33,182,.12);background:#fff;transition:transform .35s,box-shadow .35s,border-color .35s;}
-    .leader-card:hover{transform:translateY(-6px);border-color:rgba(91,33,182,.4);box-shadow:0 28px 56px -12px rgba(91,33,182,.2);}
+    .leader-card{position:relative;overflow:hidden;border-radius:12px;border:1px solid rgba(105,52,156,.12);background:#fff;transition:transform .35s,box-shadow .35s,border-color .35s;}
+    .leader-card:hover{transform:translateY(-6px);border-color:rgba(105,52,156,.4);box-shadow:0 28px 56px -12px rgba(105,52,156,.2);}
     .leader-card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;display:block;transition:transform .5s;}
     .leader-card:hover img{transform:scale(1.04);}
     .leader-overlay{position:absolute;bottom:0;left:0;right:0;padding:48px 20px 20px;background:linear-gradient(to top,rgba(10,10,10,.96) 0%,rgba(10,10,10,.7) 55%,transparent 100%);}
-    .cert-badge-sm{display:inline-block;padding:3px 8px;background:rgba(91,33,182,.2);border:1px solid rgba(91,33,182,.35);border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--p200);}
+    .cert-badge-sm{display:inline-block;padding:3px 8px;background:rgba(105,52,156,.2);border:1px solid rgba(105,52,156,.35);border-radius:4px;font-size:15px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--p200);}
 
     /* CTA */
     .cta-purple{background:linear-gradient(135deg,var(--p900) 0%,var(--p700) 100%);}
     footer{background:var(--gray900);}
 
     /* CHECK */
-    .check{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--gray700);}
+    .check{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--gray700);}
 
     /* MOBILE MENU */
     #mobile-menu{display:none;}
     #mobile-menu.open{display:block;}
-    #navbar.menu-open{background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(91,33,182,.1);box-shadow:0 4px 32px -4px rgba(91,33,182,.1);}
+    #navbar.menu-open{background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(105,52,156,.1);box-shadow:0 4px 32px -4px rgba(105,52,156,.1);}
 
     /* SOCIAL PROOF TICKER */
     .ticker-wrap{overflow:hidden;background:var(--p900);padding:10px 0;}
     .ticker-inner{display:flex;gap:0;width:max-content;animation:marquee 25s linear infinite;}
-    .ticker-item{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);padding:0 36px;white-space:nowrap;border-right:1px solid rgba(255,255,255,.1);}
+    .ticker-item{font-family:'Space Mono',monospace;font-size:15px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);padding:0 36px;white-space:nowrap;border-right:1px solid rgba(255,255,255,.1);}
     .ticker-item span{color:var(--p200);}
 
     /* GLOW LINE */
@@ -215,7 +215,7 @@
 
     /* HOVER GLOW CARD */
     .glow-card{transition:transform .3s,box-shadow .3s,border-color .3s;}
-    .glow-card:hover{box-shadow:0 0 0 1px rgba(91,33,182,.3),0 20px 48px -12px rgba(91,33,182,.25);border-color:rgba(91,33,182,.3);}
+    .glow-card:hover{box-shadow:0 0 0 1px rgba(105,52,156,.3),0 20px 48px -12px rgba(105,52,156,.25);border-color:rgba(105,52,156,.3);}
   </style>
 </head>
 <body>
@@ -226,9 +226,9 @@
 <!-- NAV -->
 <nav id="navbar">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center justify-between py-3">
       <a href="/" class="flex-shrink-0">
-        <img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT Security" class="h-16 w-auto object-contain" />
+        <img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT Security" class="h-48 w-auto object-contain" />
       </a>
       <div class="hidden md:flex items-center gap-8 lg:gap-10">
         <a href="/" class="nav-link active">Home</a>
@@ -250,7 +250,7 @@
         <svg id="ico-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden py-6 border-t mt-2 space-y-5" style="border-color:rgba(91,33,182,.1);">
+    <div id="mobile-menu" class="md:hidden py-6 border-t mt-2 space-y-5" style="border-color:rgba(105,52,156,.1);">
       <a href="/" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--p700);">Home</a>
       <a href="/services" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Services</a>
       <a href="/programs" class="block font-bold uppercase tracking-widest text-sm" style="color:var(--gray700);">Programs</a>
@@ -265,28 +265,28 @@
 <!-- HERO -->
 <section class="relative min-h-screen flex items-center overflow-hidden" style="background:#fff;">
   <!-- Animated gradient orbs -->
-  <div class="orb" style="width:500px;height:500px;top:-80px;right:-100px;background:radial-gradient(circle,rgba(91,33,182,.09) 0%,transparent 70%);animation-duration:14s;"></div>
-  <div class="orb" style="width:350px;height:350px;bottom:0;left:-80px;background:radial-gradient(circle,rgba(91,33,182,.07) 0%,transparent 70%);animation-duration:10s;animation-delay:-5s;"></div>
+  <div class="orb" style="width:500px;height:500px;top:-80px;right:-100px;background:radial-gradient(circle,rgba(105,52,156,.09) 0%,transparent 70%);animation-duration:14s;"></div>
+  <div class="orb" style="width:350px;height:350px;bottom:0;left:-80px;background:radial-gradient(circle,rgba(105,52,156,.07) 0%,transparent 70%);animation-duration:10s;animation-delay:-5s;"></div>
   <!-- Pentagon decorations -->
-  <svg style="position:absolute;width:640px;height:640px;top:-120px;right:-160px;opacity:.04;pointer-events:none;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#5B21B6" stroke-width="1.2"/></svg>
-  <svg style="position:absolute;width:280px;height:280px;bottom:60px;left:-60px;opacity:.03;pointer-events:none;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#5B21B6" stroke-width="2"/></svg>
-  <svg id="penta-mid" style="position:absolute;width:180px;height:180px;top:38%;right:12%;opacity:.06;pointer-events:none;transform-origin:center;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#5B21B6" stroke-width="2"/></svg>
+  <svg style="position:absolute;width:640px;height:640px;top:-120px;right:-160px;opacity:.04;pointer-events:none;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#69349C" stroke-width="1.2"/></svg>
+  <svg style="position:absolute;width:280px;height:280px;bottom:60px;left:-60px;opacity:.03;pointer-events:none;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#69349C" stroke-width="2"/></svg>
+  <svg id="penta-mid" style="position:absolute;width:180px;height:180px;top:38%;right:12%;opacity:.06;pointer-events:none;transform-origin:center;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="#69349C" stroke-width="2"/></svg>
 
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-24 w-full">
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-64 pb-24 w-full">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
 
       <!-- Left -->
       <div>
         <!-- Live status badge -->
-        <div class="hero-badge inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full" style="background:var(--p100);border:1px solid rgba(91,33,182,.2);">
+        <div class="hero-badge inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full" style="background:var(--p100);border:1px solid rgba(105,52,156,.2);">
           <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block;box-shadow:0 0 0 4px rgba(34,197,94,.2);"></span>
-          <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--p700);">Veteran-Owned &amp; Operated · Nationwide</span>
+          <span style="font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--p700);">Veteran-Owned &amp; Operated · Nationwide</span>
         </div>
 
         <!-- Eyebrow -->
         <p class="hero-eyebrow hero-eyebrow-text mb-3">
           The cyber threat doesn't clock out.<br/>
-          <span style="color:var(--gray500);font-family:'Inter',sans-serif;font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:none;">Protecting <span id="typed-target" class="typewriter-word">healthcare organizations</span><span id="typed-cursor"></span></span>
+          <span style="color:var(--gray500);font-family:'Inter',sans-serif;font-size:15px;font-weight:400;letter-spacing:.04em;text-transform:none;">Protecting <span id="typed-target" class="typewriter-word">healthcare organizations</span><span id="typed-cursor"></span></span>
         </p>
 
         <h1 class="hero-headline hero-h1 mb-6">
@@ -300,25 +300,25 @@
         </p>
 
         <div class="hero-ctas flex flex-col sm:flex-row gap-4">
-          <a href="/contact" class="btn-primary" style="font-size:11px;padding:14px 28px;">
+          <a href="/contact" class="btn-primary" style="font-size:15px;padding:14px 28px;">
             Schedule Free Consultation
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="/services" class="btn-outline" style="font-size:11px;padding:14px 28px;">Explore Services</a>
+          <a href="/services" class="btn-outline" style="font-size:15px;padding:14px 28px;">Explore Services</a>
         </div>
 
         <!-- Trust pills -->
         <div class="hero-pills flex flex-wrap gap-2.5 mt-8">
-          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(91,33,182,.15);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(105,52,156,.15);font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
             <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA Compliant
           </span>
-          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(91,33,182,.15);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(105,52,156,.15);font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
             <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SOC 2 Ready
           </span>
-          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(91,33,182,.15);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(105,52,156,.15);font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
             <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>50 States Served
           </span>
-          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(91,33,182,.15);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full" style="background:var(--p50);border:1px solid rgba(105,52,156,.15);font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--p700);">
             <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>90+ Yrs Experience
           </span>
         </div>
@@ -328,27 +328,27 @@
       <div class="hero-cards relative hidden lg:block">
         <div class="relative mx-auto" style="width:420px;height:430px;">
           <svg class="absolute inset-0 w-full h-full" viewBox="0 0 420 430" fill="none">
-            <polygon points="210,18 400,152 334,398 86,398 20,152" stroke="rgba(91,33,182,.09)" stroke-width="1.5" fill="rgba(91,33,182,.025)"/>
+            <polygon points="210,18 400,152 334,398 86,398 20,152" stroke="rgba(105,52,156,.09)" stroke-width="1.5" fill="rgba(105,52,156,.025)"/>
           </svg>
 
           <div class="stat-card stat-card-1" style="top:52px;left:24px;width:158px;">
             <div class="stat-num" data-target="90" data-suffix="+">90+</div>
-            <div style="font-size:10px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">Yrs Combined Exp.</div>
+            <div style="font-size:15px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">Yrs Combined Exp.</div>
           </div>
 
           <div class="stat-card stat-card-2" style="top:52px;right:24px;width:158px;">
             <div class="stat-num">8</div>
-            <div style="font-size:10px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">Security Services</div>
+            <div style="font-size:15px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">Security Services</div>
           </div>
 
           <div class="stat-card stat-card-3" style="bottom:90px;left:14px;width:163px;">
             <div class="stat-num">24/7</div>
-            <div style="font-size:10px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">Incident Response</div>
+            <div style="font-size:15px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">Incident Response</div>
           </div>
 
           <div class="stat-card stat-card-4" style="bottom:90px;right:14px;width:163px;">
             <div class="stat-num" data-target="50" data-suffix="">50</div>
-            <div style="font-size:10px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">States Nationwide</div>
+            <div style="font-size:15px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;">States Nationwide</div>
           </div>
 
           <div class="absolute inset-0 flex items-center justify-center">
@@ -362,7 +362,7 @@
   <!-- Wave -->
   <div class="absolute bottom-0 left-0 w-full overflow-hidden" style="line-height:0;">
     <svg viewBox="0 0 1440 55" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:55px;display:block;">
-      <path d="M0,28 C360,55 1080,0 1440,28 L1440,55 L0,55 Z" fill="#F5F3FF"/>
+      <path d="M0,28 C360,55 1080,0 1440,28 L1440,55 L0,55 Z" fill="#F7F0FC"/>
     </svg>
   </div>
 </section>
@@ -401,52 +401,52 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
       <div class="reveal text-center px-8 lg:border-r" style="border-color:rgba(255,255,255,.1);">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,3.8vw,3.4rem);font-weight:800;color:#fff;" data-target="90" data-suffix="+">0+</div>
-        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">Years Combined Experience</div>
+        <div style="font-size:15px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">Years Combined Experience</div>
       </div>
       <div class="reveal d1 text-center px-8 lg:border-r" style="border-color:rgba(255,255,255,.1);">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,3.8vw,3.4rem);font-weight:800;color:#fff;" data-target="8" data-suffix="">0</div>
-        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">Specialized Services</div>
+        <div style="font-size:15px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">Specialized Services</div>
       </div>
       <div class="reveal d2 text-center px-8 lg:border-r" style="border-color:rgba(255,255,255,.1);">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,3.8vw,3.4rem);font-weight:800;color:#fff;">24/7</div>
-        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">Incident Response</div>
+        <div style="font-size:15px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">Incident Response</div>
       </div>
       <div class="reveal d3 text-center px-8">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,3.8vw,3.4rem);font-weight:800;color:#fff;" data-target="50" data-suffix="">0</div>
-        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">States Served</div>
+        <div style="font-size:15px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.17em;margin-top:7px;">States Served</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section class="py-10 border-y" style="border-color:rgba(91,33,182,.1);background:var(--p50);">
+<section class="py-10 border-y" style="border-color:rgba(105,52,156,.1);background:var(--p50);">
   <div class="max-w-7xl mx-auto px-6 mb-5 flex justify-center">
     <span class="section-label">Team Certifications</span>
   </div>
   <div class="marquee-wrap">
     <div class="marquee-inner">
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CISSP</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCSP</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CASP+</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCFA</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCIH</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>Security+</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCNA</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>Network+</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCIA</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GPEN</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>NIST 800-53</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>ISO 27001</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CISSP</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCSP</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CASP+</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCFA</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCIH</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>Security+</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCNA</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>NIST 800-53</div>
-      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#5B21B6"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>ISO 27001</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CISSP</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCSP</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CASP+</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCFA</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCIH</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>Security+</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCNA</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>Network+</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCIA</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GPEN</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>NIST 800-53</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>ISO 27001</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CISSP</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCSP</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CASP+</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCFA</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>GCIH</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>Security+</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>CCNA</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>NIST 800-53</div>
+      <div class="cert-pill"><svg width="10" height="10" viewBox="0 0 12 12" fill="#69349C"><path d="M6 1L7.5 4.5H11L8.5 6.5L9.5 10L6 8L2.5 10L3.5 6.5L1 4.5H4.5L6 1Z"/></svg>ISO 27001</div>
     </div>
   </div>
 </section>
@@ -473,20 +473,20 @@
       </div>
       <div class="space-y-4">
         <div class="reveal card glow-card p-6 flex gap-5 items-start">
-          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">Veteran-Owned Credibility</h4><p style="color:var(--gray500);font-size:13px;line-height:1.65;">Army veterans leading with tactical precision honed in the most demanding environments on earth.</p></div>
+          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">Veteran-Owned Credibility</h4><p style="color:var(--gray500);font-size:15px;line-height:1.65;">Army veterans leading with tactical precision honed in the most demanding environments on earth.</p></div>
         </div>
         <div class="reveal d1 card glow-card p-6 flex gap-5 items-start">
-          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">24/7 Incident Response</h4><p style="color:var(--gray500);font-size:13px;line-height:1.65;">Rapid containment and forensic analysis minimizing downtime and data loss when seconds count.</p></div>
+          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">24/7 Incident Response</h4><p style="color:var(--gray500);font-size:15px;line-height:1.65;">Rapid containment and forensic analysis minimizing downtime and data loss when seconds count.</p></div>
         </div>
         <div class="reveal d2 card glow-card p-6 flex gap-5 items-start">
-          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">50 States. One Standard.</h4><p style="color:var(--gray500);font-size:13px;line-height:1.65;">Nationwide reach with consistent, enterprise-grade security delivery regardless of geography.</p></div>
+          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">50 States. One Standard.</h4><p style="color:var(--gray500);font-size:15px;line-height:1.65;">Nationwide reach with consistent, enterprise-grade security delivery regardless of geography.</p></div>
         </div>
         <div class="reveal d3 card glow-card p-6 flex gap-5 items-start">
-          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
-          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">Board-Level Reporting</h4><p style="color:var(--gray500);font-size:13px;line-height:1.65;">Complex cyber risk translated into clear business language executives can understand and act on.</p></div>
+          <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+          <div><h4 class="font-bold mb-1 text-sm uppercase tracking-wide">Board-Level Reporting</h4><p style="color:var(--gray500);font-size:15px;line-height:1.65;">Complex cyber risk translated into clear business language executives can understand and act on.</p></div>
         </div>
       </div>
     </div>
@@ -504,17 +504,121 @@
       <p class="reveal d2 max-w-xl mx-auto leading-relaxed" style="color:var(--gray500);font-size:15px;">Full-spectrum security operations built for organizations that can't afford to compromise.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-      <div class="reveal card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="service-num-dark">01</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Governance &amp; Risk</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">Strategic oversight, vCISO services, board-level risk reporting and governance frameworks.</p></div>
-      <div class="reveal d1 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span class="service-num-dark">02</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Risk &amp; Compliance</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">HIPAA, SOC2, ISO 27001 readiness with continuous compliance monitoring programs.</p></div>
-      <div class="reveal d2 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><span class="service-num-dark">03</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Incident Response</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">24/7 rapid response, digital forensics, malware analysis and post-incident recovery.</p></div>
-      <div class="reveal d3 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><span class="service-num-dark">04</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Physical Security</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">Bridging physical and digital security — penetration testing, access control, CPTED design.</p></div>
-      <div class="reveal d4 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div><span class="service-num-dark">05</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Cloud &amp; Identity</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">Zero Trust architecture, IAM strategy, cloud security review and SaaS application security.</p></div>
-      <div class="reveal d5 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="service-num-dark">06</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Medical Device &amp; IoT</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">Device vulnerability assessments, FDA guidance, network segmentation and IoT discovery.</p></div>
-      <div class="reveal d6 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span class="service-num-dark">07</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Application Security</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">Dynamic/static analysis, API security testing, pen testing and secure SDLC integration.</p></div>
-      <div class="reveal d7 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="1.8" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div><span class="service-num-dark">08</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Business Continuity</h3><p style="font-size:12px;color:var(--gray500);line-height:1.65;">Tabletop exercises, disaster recovery planning, BCP and crisis communications readiness.</p></div>
+      <div class="reveal card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="service-num-dark">01</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Governance &amp; Risk</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">Strategic oversight, vCISO services, board-level risk reporting and governance frameworks.</p></div>
+      <div class="reveal d1 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span class="service-num-dark">02</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Risk &amp; Compliance</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">HIPAA, SOC2, ISO 27001 readiness with continuous compliance monitoring programs.</p></div>
+      <div class="reveal d2 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><span class="service-num-dark">03</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Incident Response</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">24/7 rapid response, digital forensics, malware analysis and post-incident recovery.</p></div>
+      <div class="reveal d3 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><span class="service-num-dark">04</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Physical Security</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">Bridging physical and digital security — penetration testing, access control, CPTED design.</p></div>
+      <div class="reveal d4 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div><span class="service-num-dark">05</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Cloud &amp; Identity</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">Zero Trust architecture, IAM strategy, cloud security review and SaaS application security.</p></div>
+      <div class="reveal d5 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="service-num-dark">06</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Medical Device &amp; IoT</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">Device vulnerability assessments, FDA guidance, network segmentation and IoT discovery.</p></div>
+      <div class="reveal d6 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span class="service-num-dark">07</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Application Security</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">Dynamic/static analysis, API security testing, pen testing and secure SDLC integration.</p></div>
+      <div class="reveal d7 card glow-card bg-white p-6"><div class="flex items-start justify-between mb-4"><div class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div><span class="service-num-dark">08</span></div><h3 class="font-bold text-sm uppercase tracking-wide mb-2">Business Continuity</h3><p style="font-size:15px;color:var(--gray500);line-height:1.65;">Tabletop exercises, disaster recovery planning, BCP and crisis communications readiness.</p></div>
     </div>
     <div class="reveal text-center">
       <a href="/services" class="btn-primary">View All Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SMB & ENTERPRISE SOLUTIONS -->
+<section class="py-28" style="background:#fff;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="section-label reveal mb-6">Security Solutions By Scale</div>
+      <h2 class="font-display reveal d1 uppercase mb-5" style="font-size:clamp(2.2rem,3.8vw,3.6rem);font-weight:900;letter-spacing:-.025em;line-height:1.05;">Built for Your<br/><span class="text-gradient">Organization's Size</span></h2>
+      <p class="reveal d2 max-w-xl mx-auto leading-relaxed" style="color:var(--gray500);font-size:15px;">Whether you're a growing small business or a large enterprise, R3DOUBT delivers right-sized cybersecurity that fits your risk profile and budget — with zero compromise on quality.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+
+      <!-- SMALL BUSINESS CARD -->
+      <div class="reveal card glow-card p-10" style="border:2px solid rgba(105,52,156,.15);border-radius:16px;background:var(--p50);">
+        <div class="flex items-center gap-4 mb-6">
+          <div style="width:52px;height:52px;border-radius:12px;background:var(--p100);border:1px solid rgba(105,52,156,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <div style="font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--p700);margin-bottom:2px;">Small Business</div>
+            <h3 class="font-display font-bold uppercase" style="font-size:clamp(1.5rem,2.5vw,2rem);letter-spacing:-.02em;line-height:1.1;">Essential Shield</h3>
+          </div>
+        </div>
+        <p style="color:var(--gray500);font-size:15px;line-height:1.75;margin-bottom:28px;">Affordable, enterprise-quality protection for practices, clinics, law firms, and small organizations that handle sensitive data and need to stay compliant without a dedicated IT team.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3" style="font-size:15px;color:var(--gray700);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            HIPAA &amp; compliance readiness assessments
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:var(--gray700);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            24/7 incident response &amp; breach support
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:var(--gray700);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Security awareness training for staff
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:var(--gray700);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Vulnerability scanning &amp; patch management
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:var(--gray700);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Endpoint protection &amp; email security
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:var(--gray700);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Virtual CISO advisory (part-time)
+          </li>
+        </ul>
+        <a href="/contact" class="btn-primary">Get Protected Today <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- ENTERPRISE CARD -->
+      <div class="reveal d1 card glow-card p-10" style="border:2px solid rgba(105,52,156,.3);border-radius:16px;background:linear-gradient(145deg,var(--p900) 0%,var(--p800) 100%);position:relative;overflow:hidden;">
+        <svg class="absolute" style="width:320px;height:320px;top:-80px;right:-80px;opacity:.06;pointer-events:none;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1.5"/></svg>
+        <div class="flex items-center gap-4 mb-6 relative">
+          <div style="width:52px;height:52px;border-radius:12px;background:rgba(105,52,156,.4);border:1px solid rgba(212,170,238,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AAEE" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div>
+            <div style="font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--p200);margin-bottom:2px;">Enterprise</div>
+            <h3 class="font-display font-bold uppercase" style="font-size:clamp(1.5rem,2.5vw,2rem);letter-spacing:-.02em;line-height:1.1;color:#fff;">Sovereign Defense</h3>
+          </div>
+        </div>
+        <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.75;margin-bottom:28px;" class="relative">Full-spectrum cyber operations for large organizations, government-aligned contractors, and critical infrastructure — including advanced threat hunting, red team exercises, and board-level risk governance.</p>
+        <ul class="space-y-3 mb-8 relative">
+          <li class="flex items-start gap-3" style="font-size:15px;color:rgba(255,255,255,.85);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AAEE" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Full-time vCISO &amp; executive advisory
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:rgba(255,255,255,.85);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AAEE" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Red team &amp; advanced penetration testing
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:rgba(255,255,255,.85);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AAEE" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            SOC 2, ISO 27001, NIST 800-53 programs
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:rgba(255,255,255,.85);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AAEE" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Zero Trust architecture &amp; cloud security
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:rgba(255,255,255,.85);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AAEE" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Threat intelligence &amp; 24/7 SOC monitoring
+          </li>
+          <li class="flex items-start gap-3" style="font-size:15px;color:rgba(255,255,255,.85);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AAEE" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+            Business continuity &amp; disaster recovery
+          </li>
+        </ul>
+        <a href="/contact" class="btn-white relative">Schedule Enterprise Briefing <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+    </div>
+
+    <div class="reveal text-center mt-12">
+      <p style="color:var(--gray500);font-size:15px;">Not sure which tier fits your needs? <a href="/contact" style="color:var(--p700);font-weight:700;text-decoration:none;">Talk to our team</a> — we'll build a plan around your actual risk exposure.</p>
     </div>
   </div>
 </section>
@@ -530,11 +634,11 @@
       <p class="reveal d2 max-w-xl mx-auto leading-relaxed" style="color:var(--gray500);font-size:15px;">A team of veteran operators, forensic specialists, and enterprise risk executives with over 90 combined years of experience.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-12">
-      <div class="reveal leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/18f3cdc80881bc02c822bc390639a7f1.jpg" alt="Ryan Trine"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Ryan Trine</h3><div style="color:#C4B5FD;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Executive Officer</div><div style="color:rgba(255,255,255,.4);font-size:11px;margin-top:2px;">15 Yrs · Army Veteran</div></div></div>
-      <div class="reveal d1 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/f67ee9cb0763dc2849919bf7676a188c.webp" alt="Luis Nieves"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Luis Nieves</h3><div style="color:#C4B5FD;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Information Security Officer</div><div style="color:rgba(255,255,255,.4);font-size:11px;margin-top:2px;">21 Yrs · Army Veteran</div></div></div>
-      <div class="reveal d2 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/8aad23004c9905e889e8f00d0a1078e4.png" alt="John E. Lander"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">John E. Lander, PhD</h3><div style="color:#C4B5FD;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Operating Officer</div><div style="color:rgba(255,255,255,.4);font-size:11px;margin-top:2px;">40 Yrs · Engineer</div></div></div>
-      <div class="reveal d3 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/33f68eaca193bd2b176a6357331de061.jpg" alt="Drew Groves"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Drew Groves</h3><div style="color:#C4B5FD;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Financial Officer</div><div style="color:rgba(255,255,255,.4);font-size:11px;margin-top:2px;">16 Yrs · Entrepreneur</div></div></div>
-      <div class="reveal d4 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/bde63842e424742cec7b901d4636ff59.jpg" alt="Darcie Trine"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Darcie Trine</h3><div style="color:#C4B5FD;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Senior Consultant</div><div style="color:rgba(255,255,255,.4);font-size:11px;margin-top:2px;">20 Yrs · Aerospace &amp; Defense</div></div></div>
+      <div class="reveal leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/18f3cdc80881bc02c822bc390639a7f1.jpg" alt="Ryan Trine"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Ryan Trine</h3><div style="color:#D4AAEE;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Executive Officer</div><div style="color:rgba(255,255,255,.4);font-size:15px;margin-top:2px;">15 Yrs · Army Veteran</div></div></div>
+      <div class="reveal d1 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/f67ee9cb0763dc2849919bf7676a188c.webp" alt="Luis Nieves"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Luis Nieves</h3><div style="color:#D4AAEE;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Information Security Officer</div><div style="color:rgba(255,255,255,.4);font-size:15px;margin-top:2px;">21 Yrs · Army Veteran</div></div></div>
+      <div class="reveal d2 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/8aad23004c9905e889e8f00d0a1078e4.png" alt="John E. Lander"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">John E. Lander, PhD</h3><div style="color:#D4AAEE;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Operating Officer</div><div style="color:rgba(255,255,255,.4);font-size:15px;margin-top:2px;">40 Yrs · Engineer</div></div></div>
+      <div class="reveal d3 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/33f68eaca193bd2b176a6357331de061.jpg" alt="Drew Groves"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Drew Groves</h3><div style="color:#D4AAEE;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Chief Financial Officer</div><div style="color:rgba(255,255,255,.4);font-size:15px;margin-top:2px;">16 Yrs · Entrepreneur</div></div></div>
+      <div class="reveal d4 leader-card"><img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/bde63842e424742cec7b901d4636ff59.jpg" alt="Darcie Trine"/><div class="leader-overlay"><h3 class="text-white font-bold text-base">Darcie Trine</h3><div style="color:#D4AAEE;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-top:2px;">Senior Consultant</div><div style="color:rgba(255,255,255,.4);font-size:15px;margin-top:2px;">20 Yrs · Aerospace &amp; Defense</div></div></div>
     </div>
     <div class="reveal text-center">
       <a href="/leadership" class="btn-outline">Meet the Full Team <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -547,14 +651,14 @@
   <svg class="absolute opacity-10" style="width:480px;height:480px;top:-140px;right:-90px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1"/></svg>
   <svg class="absolute opacity-5" style="width:300px;height:300px;bottom:-60px;left:-40px;" viewBox="0 0 200 200"><polygon points="100,8 192,72 160,182 40,182 8,72" fill="none" stroke="white" stroke-width="1"/></svg>
   <div class="relative max-w-3xl mx-auto px-6 text-center">
-    <div class="reveal mb-5 inline-flex items-center gap-3" style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);">
+    <div class="reveal mb-5 inline-flex items-center gap-3" style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);">
       <span style="width:24px;height:1px;background:rgba(255,255,255,.3);display:inline-block;"></span>Ready to Secure Your Future?<span style="width:24px;height:1px;background:rgba(255,255,255,.3);display:inline-block;"></span>
     </div>
     <h2 class="font-display reveal d1 uppercase text-white mb-5" style="font-size:clamp(2.4rem,5vw,5rem);font-weight:900;line-height:.97;letter-spacing:-.025em;">Don't Wait for<br/>A Breach</h2>
     <p class="reveal d2 mb-10 max-w-xl mx-auto leading-relaxed" style="color:rgba(255,255,255,.65);font-size:15px;">Schedule a no-obligation consultation. We'll assess your organization's security posture and recommend a clear path forward — within 24 hours.</p>
     <div class="reveal d3 flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/contact" class="btn-white" style="font-size:11px;padding:14px 32px;">Schedule Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="tel:+19312784651" class="btn-outline" style="border-color:rgba(255,255,255,.35);color:#fff;font-size:11px;padding:14px 32px;">
+      <a href="/contact" class="btn-white" style="font-size:15px;padding:14px 32px;">Schedule Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="tel:+19312784651" class="btn-outline" style="border-color:rgba(255,255,255,.35);color:#fff;font-size:15px;padding:14px 32px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 19.65 19.65 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6 6l1.54-1.54a2 2 0 0 1 2.11-.45 19.65 19.65 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (931) 278-4651
       </a>
@@ -568,44 +672,44 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
       <div>
         <img src="https://horizons-cdn.hostinger.com/6584349c-f0fa-4cdd-9bae-06e8483a0d47/1ad8da5147e7e42e3cc9226dfb5ea616.png" alt="R3DOUBT" class="h-10 w-auto mb-5" style="filter:brightness(0) invert(1);opacity:.85;" />
-        <p style="color:rgba(255,255,255,.35);font-size:13px;line-height:1.75;">Ready. Reliable. Resilient.<br/>Veteran-owned cybersecurity built to endure.</p>
+        <p style="color:rgba(255,255,255,.35);font-size:15px;line-height:1.75;">Ready. Reliable. Resilient.<br/>Veteran-owned cybersecurity built to endure.</p>
         <div class="flex gap-3 mt-6">
-          <a href="https://www.linkedin.com/company/r3doubt-security/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(91,33,182,.6)';this.style.color='#C4B5FD'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="https://x.com/R3DOUBTSEC" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(91,33,182,.6)';this.style.color='#C4B5FD'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="https://www.facebook.com/people/R3Doubt-Security/61588599841554/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(91,33,182,.6)';this.style.color='#C4B5FD'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.linkedin.com/company/r3doubt-security/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(105,52,156,.6)';this.style.color='#D4AAEE'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://x.com/R3DOUBTSEC" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(105,52,156,.6)';this.style.color='#D4AAEE'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.facebook.com/people/R3Doubt-Security/61588599841554/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg flex items-center justify-center" style="border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(105,52,156,.6)';this.style.color='#D4AAEE'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.4)'" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
         </div>
       </div>
       <div>
-        <h4 style="color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px;">Pages</h4>
+        <h4 style="color:#fff;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px;">Pages</h4>
         <ul>
-          <li class="mb-3"><a href="/" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Home</a></li>
-          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Services</a></li>
-          <li class="mb-3"><a href="/programs" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Programs</a></li>
-          <li class="mb-3"><a href="/leadership" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Leadership</a></li>
-          <li><a href="/contact" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Contact</a></li>
+          <li class="mb-3"><a href="/" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Home</a></li>
+          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Services</a></li>
+          <li class="mb-3"><a href="/programs" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Programs</a></li>
+          <li class="mb-3"><a href="/leadership" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Leadership</a></li>
+          <li><a href="/contact" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px;">Services</h4>
+        <h4 style="color:#fff;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px;">Services</h4>
         <ul>
-          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Governance &amp; Risk</a></li>
-          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Compliance &amp; Assurance</a></li>
-          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Incident Response</a></li>
-          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Cloud Security</a></li>
-          <li><a href="/services" style="color:rgba(255,255,255,.4);font-size:13px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Application Security</a></li>
+          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Governance &amp; Risk</a></li>
+          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Compliance &amp; Assurance</a></li>
+          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Incident Response</a></li>
+          <li class="mb-3"><a href="/services" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Cloud Security</a></li>
+          <li><a href="/services" style="color:rgba(255,255,255,.4);font-size:15px;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Application Security</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px;">Contact</h4>
+        <h4 style="color:#fff;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px;">Contact</h4>
         <ul>
-          <li class="mb-4"><a href="tel:+19312784651" style="color:rgba(255,255,255,.45);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 19.65 19.65 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6 6l1.54-1.54a2 2 0 0 1 2.11-.45 19.65 19.65 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(931) 278-4651</a></li>
-          <li class="mb-4"><a href="mailto:info@r3doubtsec.com" style="color:rgba(255,255,255,.45);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@r3doubtsec.com</a></li>
-          <li style="color:rgba(255,255,255,.3);font-size:13px;display:flex;align-items:center;gap:10px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>All 50 States</li>
+          <li class="mb-4"><a href="tel:+19312784651" style="color:rgba(255,255,255,.45);font-size:15px;text-decoration:none;display:flex;align-items:center;gap:10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 19.65 19.65 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6 6l1.54-1.54a2 2 0 0 1 2.11-.45 19.65 19.65 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(931) 278-4651</a></li>
+          <li class="mb-4"><a href="mailto:info@r3doubtsec.com" style="color:rgba(255,255,255,.45);font-size:15px;text-decoration:none;display:flex;align-items:center;gap:10px;transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@r3doubtsec.com</a></li>
+          <li style="color:rgba(255,255,255,.3);font-size:15px;display:flex;align-items:center;gap:10px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>All 50 States</li>
         </ul>
       </div>
     </div>
     <div style="height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;"></div>
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4" style="font-size:12px;color:rgba(255,255,255,.22);">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4" style="font-size:15px;color:rgba(255,255,255,.22);">
       <p>&copy; <span id="year"></span> R3DOUBT Security Group. All rights reserved.</p>
       <div class="flex gap-6">
         <a href="#" style="color:rgba(255,255,255,.22);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.22)'">Privacy Policy</a>
@@ -695,15 +799,15 @@
 </script>
 
 <!-- Cookie Consent Banner -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(91,33,182,.15);box-shadow:0 -8px 40px -8px rgba(91,33,182,.12);padding:18px 24px;">
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(105,52,156,.15);box-shadow:0 -8px 40px -8px rgba(105,52,156,.12);padding:18px 24px;">
   <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
     <div style="display:flex;align-items:flex-start;gap:12px;flex:1;min-width:0;">
-      <svg style="flex-shrink:0;margin-top:1px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <p style="font-family:'Inter',sans-serif;font-size:13px;color:#374151;line-height:1.6;margin:0;">We use cookies to enhance site functionality and analyze traffic. By continuing to browse, you accept our use of cookies. <a href="/contact" style="color:#5B21B6;text-decoration:underline;font-weight:600;">Learn More</a></p>
+      <svg style="flex-shrink:0;margin-top:1px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#69349C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p style="font-family:'Inter',sans-serif;font-size:15px;color:#374151;line-height:1.6;margin:0;">We use cookies to enhance site functionality and analyze traffic. By continuing to browse, you accept our use of cookies. <a href="/contact" style="color:#69349C;text-decoration:underline;font-weight:600;">Learn More</a></p>
     </div>
     <div style="display:flex;gap:10px;flex-shrink:0;">
-      <button onclick="r3dCookieChoice('declined')" style="padding:9px 18px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:transparent;color:#6B7280;border:1.5px solid #D1D5DB;border-radius:6px;cursor:pointer;" onmouseover="this.style.borderColor='#5B21B6';this.style.color='#5B21B6'" onmouseout="this.style.borderColor='#D1D5DB';this.style.color='#6B7280'">Decline</button>
-      <button onclick="r3dCookieChoice('accepted')" style="padding:9px 20px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#5B21B6;color:#fff;border:none;border-radius:6px;cursor:pointer;box-shadow:0 4px 16px -4px rgba(91,33,182,.4);" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#3D1470'" onmouseout="this.style.transform='';this.style.background='#5B21B6'">Accept Cookies</button>
+      <button onclick="r3dCookieChoice('declined')" style="padding:9px 18px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:transparent;color:#6B7280;border:1.5px solid #D1D5DB;border-radius:6px;cursor:pointer;" onmouseover="this.style.borderColor='#69349C';this.style.color='#69349C'" onmouseout="this.style.borderColor='#D1D5DB';this.style.color='#6B7280'">Decline</button>
+      <button onclick="r3dCookieChoice('accepted')" style="padding:9px 20px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#69349C;color:#fff;border:none;border-radius:6px;cursor:pointer;box-shadow:0 4px 16px -4px rgba(105,52,156,.4);" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#4F2677'" onmouseout="this.style.transform='';this.style.background='#69349C'">Accept Cookies</button>
     </div>
   </div>
 </div>
