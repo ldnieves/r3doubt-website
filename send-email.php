@@ -26,7 +26,7 @@ if (file_exists(__DIR__ . '/config.php')) {
 if (!defined('POSTMARK_TOKEN'))   define('POSTMARK_TOKEN',   '7e47618c-d3dc-43e0-9d06-758fe5d59418');
 if (!defined('MAIL_FROM'))        define('MAIL_FROM',        'contact@r3doubtsec.com');
 if (!defined('MAIL_NOTIFY'))      define('MAIL_NOTIFY',      'contact@r3doubtsec.com');
-if (!defined('TURNSTILE_SECRET')) define('TURNSTILE_SECRET', '0x4AAAAAAC_FtFUr0fl1fJHE0QDone9TO9o');
+if (!defined('TURNSTILE_SECRET')) define('TURNSTILE_SECRET', '0x4AAAAAAC_FtFUiIvE3PzDOSeTf8napE9s');
 
 // PHP < 8.0 polyfill
 if (!function_exists('str_starts_with')) {
